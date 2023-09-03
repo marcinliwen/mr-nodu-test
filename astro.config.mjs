@@ -12,6 +12,6 @@ export default defineConfig({
       },
     }),
   ],
-  //output: "server",
-  //adapter: vercel(),
+  output: "server",
+  adapter: vercel(),
 });
