@@ -1,0 +1,26 @@
+---
+const { options, name, placeholder } = Astro.props;
+---
+
+<div class="custom-select">
+  <input
+    class="hidden lg:inline"
+    type="text"
+    name={name}
+    value=""
+    placeholder={placeholder}
+  />
+  <ul class="custom-select-content hidden lg:block">
+    <li data-value="Temat-1">Temat-1</li>
+    <li data-value="Temat-2">Temat-2</li>
+    <li data-value="Temat-3">Temat-3</li>
+    <li data-value="Temat-4">Temat-4</li>
+    <li data-value="Temat-5">Temat-5</li>
+    <li data-value="Temat-6">Temat-6</li>
+  </ul>
+  <div class="custom-select-icon hidden lg:block"></div>
+  <select class="native-select lg:hidden" required>
+    <option disabled selected value="">{placeholder}</option>
+    <option value="Temat 1"> Temat 1</option>
+  </select>
+</div>

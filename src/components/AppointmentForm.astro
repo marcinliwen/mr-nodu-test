@@ -1,0 +1,55 @@
+---
+import Input from "./Input.astro";
+const { bg } = Astro.props;
+---
+
+<section class={`py-32 ${bg && bg}`}>
+  <div class="max-w-[956px] mx-auto lg:flex items-center px-4 lg:p-0">
+    <div class="text-bordo-200 max-w-[419px] mr-auto mb-8 lg:mb-0">
+      <h2 class="mb-6">
+        <span class=" ">Zamów kontakt</span>
+        <br />
+        <span class="victorserif">z naszym sprzedawcą</span>
+      </h2>
+      <h4 class="victorserif">
+        Jeśli chcesz dowiedzieć się o naszych produktach lub chcesz dokonać
+        zakupu
+      </h4>
+    </div>
+    <form class="w-full max-w-[464px] grid gap-8">
+      <!-- <Input
+        type="text"
+        id="get-date"
+        label="Wybierz datę kontaktu"
+        placeholder="Wybierz datę kontaktu"
+        name="data"
+      /> -->
+      <input
+        id="get-date"
+        placeholder="Wybierz datę kontaktu"
+        name="date"
+        data-language="pl"
+        value=""
+        type="text"
+        readonly
+        class="date-input"
+      />
+      <Input
+        type="text"
+        id="name"
+        label="Imię i nazwisko"
+        placeholder="Imię i nazwisko"
+        name="name"
+      />
+      <Input
+        type="mail"
+        id="mail"
+        label="E-mail"
+        placeholder="E-mail"
+        name="mail"
+      />
+
+      <button type="button" class="btn primary full w-full">Wyślij</button>
+    </form>
+  </div>
+</section>

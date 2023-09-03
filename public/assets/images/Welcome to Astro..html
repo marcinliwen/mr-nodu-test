@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:3000/usluga -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="http://localhost:3000/favicon.png">
+    <meta name="generator" content="Astro v2.5.6">
+    <title>Welcome to Astro.</title>
+  <style type="text/css" data-astro-dev-id="/Users/marcinliwen/Documents/Projects/WiseEnergy/wise-energy-test/src/styles/global.css">/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+  @font-face {
+    font-family: "Work Sans";
+    src: url("/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf")
+      format("truetype-variations");
+    font-weight: 300 500;
+  }
+  @font-face {
+    font-family: "Lagu Sans";
+    src: url("/assets/fonts/ / -Light.otf") format("opentype");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Lagu Sans";
+    src: url("/assets/fonts/ / -Medium.otf") format("opentype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Victor Serif";
+    src: url("/assets/fonts/VictorSerif/VictorSerif-45RegularItalic.woff")
+      format("woff");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Victor Serif";
+    src: url("/assets/fonts/VictorSerif/VictorSerif-45RegularItalic.woff2")
+      format("woff2");
+    font-weight: 400;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 63px;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 200%;
+  }
+  h4 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+  }
+  h5 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 46px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 200%;
+    font-family: "Work Sans";
+  }
+  input,
+  textarea {
+    border-bottom: 0.5px solid #750843;
+    border-radius: 8px 8px 0px 0px;
+    padding: 18px 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #750843;
+    width: 100%;
+    max-width: 465px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background-color: transparent;
+  }
+  input {
+    height: 56px;
+  }
+  input:focus {
+    background: rgba(117, 8, 67, 0.05);
+    outline: none;
+    padding-bottom: 8px;
+    padding-top: 28px;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #750843;
+  }
+  input::placeholder,
+  textarea::placeholder,
+  label {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #750843;
+  }
+  textarea:focus {
+    background: rgba(117, 8, 67, 0.15);
+    outline: none;
+  }
+  textarea:focus::-moz-placeholder {
+    opacity: 0;
+  }
+  textarea:focus::placeholder {
+    opacity: 0;
+  }
+  @media (min-width: 1024px) {
+    p {
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 200%;
+      font-family: "Work Sans";
+    }
+  }
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1440px) {
+
+  .container {
+    max-width: 1440px;
+  }
+}
+.  {
+    font-style: normal;
+    font-family: "Lagu Sans";
+  }
+.victorserif {
+    font-family: "Victor Serif";
+    font-style: italic;
+  }
+.wrapper {
+    padding: 0 16px;
+  }
+@media (min-width: 768px) {
+    .wrapper {
+      padding: 0 32px;
+    }
+  }
+@media (min-width: 1024px) {
+    .wrapper {
+      padding: 0 64px;
+    }
+  }
+@media (min-width: 1280px) {
+    .wrapper {
+      padding: 0 128px;
+    }
+  }
+.small {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 180%;
+  }
+.btn-text {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+.small-text {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+.small-stroke {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: underline;
+  }
+.error {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+  }
+.btn {
+    display: block;
+    padding: 17.5px 47px;
+    border-radius: 8px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    border-width: 1px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+.btn-small {
+    display: block;
+    padding: 11px 32px;
+    min-width: auto;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 8px;
+    border-width: 1px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+.primary {
+    border-width: 1px;
+    border-color: #750843;
+  }
+.primary.full {
+    background: #750843;
+    color: #fff;
+  }
+.primary.outlined {
+    background: #fff;
+    color: #750843;
+  }
+.secondary {
+    border-color: #ffec9e;
+    background: #ffec9e;
+    color: #750843;
+  }
+.disabled {
+    border-color: #d6d6d6;
+    background: #d6d6d6;
+    color: #330a21;
+  }
+.custom-input label {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+.custom-input input:focus + label {
+    top: 8px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+.custom-input input::-moz-placeholder {
+    opacity: 0;
+  }
+.custom-input input::placeholder {
+    opacity: 0;
+  }
+.custom-input input:not(:focus):not(:-moz-placeholder-shown) + label {
+    opacity: 0;
+  }
+.custom-input input:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+  }
+.custom-input input:not(:focus):not(:-moz-placeholder-shown) {
+    background: rgba(117, 8, 67, 0.15);
+  }
+.custom-input input:not(:focus):not(:placeholder-shown) {
+    background: rgba(117, 8, 67, 0.15);
+  }
+.custom-input.error input {
+    background: rgba(176, 0, 0, 0.2) !important;
+    color: #e20000;
+    border-bottom: 0.5px solid #b00000;
+  }
+.custom-textarea {
+    position: relative;
+    width: 100%;
+    max-width: 465px;
+    display: grid;
+    z-index: 1;
+  }
+.custom-textarea:after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 21.5L21.5 2' stroke='%23750843' stroke-linecap='round'/%3E%3Cpath d='M12 21L22 11' stroke='%23750843' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+    display: block;
+    pointer-events: none;
+  }
+.textarea-cover {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0px;
+    bottom: 1px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+  }
+textarea:focus + .textarea-cover {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0px;
+    bottom: 1px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background: #ecdbe3;
+    z-index: 1;
+  }
+.custom-select {
+    position: relative;
+    width: 100%;
+    max-width: 465px;
+    cursor: pointer;
+    z-index: 10;
+  }
+.custom-select-icon {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_156_3600)'%3E%3Cpath d='M0.450684 4.68921L9.72152 15.1667C9.76061 15.2109 9.80865 15.2463 9.86245 15.2705C9.91625 15.2948 9.97459 15.3073 10.0336 15.3073C10.0926 15.3073 10.1509 15.2948 10.2047 15.2705C10.2585 15.2463 10.3066 15.2109 10.3457 15.1667L19.6173 4.68921' stroke='%23750843' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_156_3600'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+.custom-select input:focus ~ .custom-select-icon {
+    transform: scaleY(-1);
+  }
+.custom-select-content {
+    height: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    overflow: auto;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background: #fff;
+    z-index: 10;
+  }
+.custom-select input:focus {
+    padding: 18px 16px;
+  }
+.custom-select input:focus + .custom-select-content {
+    height: 192px;
+  }
+.custom-select input:not(:focus):not(:-moz-placeholder-shown) {
+    background: rgba(117, 8, 67, 0.15);
+  }
+.custom-select input:not(:focus):not(:placeholder-shown) {
+    background: rgba(117, 8, 67, 0.15);
+  }
+.custom-select-content li {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #750843;
+    width: 100%;
+    padding: 14px 16px;
+    background: #fff;
+    cursor: pointer;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+.custom-select-content li:hover {
+    background: rgba(117, 8, 67, 0.05) !important;
+  }
+.custom-select-content li:nth-child(2n) {
+    background: rgba(117, 8, 67, 0.02);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+.custom-select-content::-webkit-scrollbar {
+    width: 3px;
+  }
+.custom-select-content::-webkit-scrollbar-track {
+    background-color: #f1e2a6;
+    margin: 8px 16px 0;
+  }
+.custom-select-content::-webkit-scrollbar-thumb {
+    background: #750843;
+  }
+.line-after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #b3b3b3;
+    position: absolute;
+  }
+.instagram img {
+    border-radius: 16px;
+  }
+.instagram > img {
+    width: 287px;
+    height: 287px;
+  }
+.instagram-card {
+    width: 287px;
+    height: 287px;
+    background: #750843;
+    border-radius: 16px;
+    padding: 21px;
+  }
+.main-menu {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 100%;
+    right: 0px;
+    width: 100%;
+    background: #750843;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+  }
+.main-menu.id-open {
+    left: 0;
+  }
+.main-menu nav {
+    opacity: 0;
+    position: relative;
+    left: 50px;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 500ms;
+  }
+.main-menu.id-open nav {
+    opacity: 1;
+    left: 0;
+  }
+@media (min-width: 1024px) {
+    .main-menu {
+      position: static;
+      flex-direction: row;
+      width: auto;
+      background: none;
+    }
+    .main-menu nav {
+      opacity: 1;
+      left: 0;
+      position: static;
+    }
+  }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.left-0 {
+  left: 0px;
+}
+.left-20 {
+  left: 5rem;
+}
+.right-0 {
+  right: 0px;
+}
+.right-6 {
+  right: 1.5rem;
+}
+.top-0 {
+  top: 0px;
+}
+.top-6 {
+  top: 1.5rem;
+}
+.top-\[20px\] {
+  top: 20px;
+}
+.top-auto {
+  top: auto;
+}
+.\!z-20 {
+  z-index: 20 !important;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mb-32 {
+  margin-bottom: 8rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.ml-10 {
+  margin-left: 2.5rem;
+}
+.ml-8 {
+  margin-left: 2rem;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mr-4 {
+  margin-right: 1rem;
+}
+.mr-8 {
+  margin-right: 2rem;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-\[603px\] {
+  height: 603px;
+}
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.min-h-\[500px\] {
+  min-height: 500px;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-\[500\%\] {
+  width: 500%;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+.max-w-\[245px\] {
+  max-width: 245px;
+}
+.max-w-\[419px\] {
+  max-width: 419px;
+}
+.max-w-\[424px\] {
+  max-width: 424px;
+}
+.max-w-\[464px\] {
+  max-width: 464px;
+}
+.max-w-\[482px\] {
+  max-width: 482px;
+}
+.max-w-\[516px\] {
+  max-width: 516px;
+}
+.max-w-\[648px\] {
+  max-width: 648px;
+}
+.max-w-\[956px\] {
+  max-width: 956px;
+}
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.max-w-\[569px\] {
+  max-width: 569px;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.columns-2 {
+  -moz-columns: 2;
+       columns: 2;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-20 {
+  gap: 5rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-y-8 {
+  row-gap: 2rem;
+}
+.self-center {
+  align-self: center;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-2xl {
+  border-radius: 1rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.bg-bordo-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(117 8 67 / var(--tw-bg-opacity));
+}
+.bg-grey-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 247 247 / var(--tw-bg-opacity));
+}
+.bg-grey-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 238 237 / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-yellow-20 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 249 238 / var(--tw-bg-opacity));
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-12 {
+  padding: 3rem;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.pb-20 {
+  padding-bottom: 5rem;
+}
+.pb-28 {
+  padding-bottom: 7rem;
+}
+.pb-36 {
+  padding-bottom: 9rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
+}
+.pl-20 {
+  padding-left: 5rem;
+}
+.pr-20 {
+  padding-right: 5rem;
+}
+.pr-4 {
+  padding-right: 1rem;
+}
+.pt-12 {
+  padding-top: 3rem;
+}
+.pt-24 {
+  padding-top: 6rem;
+}
+.pt-28 {
+  padding-top: 7rem;
+}
+.pt-52 {
+  padding-top: 13rem;
+}
+.text-center {
+  text-align: center;
+}
+.\!text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+.text-\[12px\] {
+  font-size: 12px;
+}
+.text-\[20px\] {
+  font-size: 20px;
+}
+.font-normal {
+  font-weight: 400;
+}
+.italic {
+  font-style: italic;
+}
+.leading-7 {
+  line-height: 1.75rem;
+}
+.text-bordo-100 {
+  --tw-text-opacity: 1;
+  color: rgb(117 8 67 / var(--tw-text-opacity));
+}
+.text-bordo-200 {
+  --tw-text-opacity: 1;
+  color: rgb(96 17 61 / var(--tw-text-opacity));
+}
+.text-bordo-300 {
+  --tw-text-opacity: 1;
+  color: rgb(51 10 33 / var(--tw-text-opacity));
+}
+.text-error {
+  --tw-text-opacity: 1;
+  color: rgb(176 0 0 / var(--tw-text-opacity));
+}
+.text-grey-200 {
+  --tw-text-opacity: 1;
+  color: rgb(31 31 31 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-yellow-200 {
+  --tw-text-opacity: 1;
+  color: rgb(249 247 247 / var(--tw-text-opacity));
+}
+.text-yellow-50 {
+  --tw-text-opacity: 1;
+  color: rgb(241 226 166 / var(--tw-text-opacity));
+}
+.text-yellow-500 {
+  --tw-text-opacity: 1;
+  color: rgb(247 241 223 / var(--tw-text-opacity));
+}
+.text-yellow-600 {
+  --tw-text-opacity: 1;
+  color: rgb(236 229 224 / var(--tw-text-opacity));
+}
+.text-yellow-700 {
+  --tw-text-opacity: 1;
+  color: rgb(247 244 244 / var(--tw-text-opacity));
+}
+.underline {
+  text-decoration-line: underline;
+}
+.outline {
+  outline-style: solid;
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+@media (min-width: 768px) {
+
+  .md\:top-auto {
+    top: auto;
+  }
+
+  .md\:-mr-4 {
+    margin-right: -1rem;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .lg\:absolute {
+    position: absolute;
+  }
+
+  .lg\:top-\[-15px\] {
+    top: -15px;
+  }
+
+  .lg\:top-\[-23px\] {
+    top: -23px;
+  }
+
+  .lg\:top-\[4px\] {
+    top: 4px;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mb-24 {
+    margin-bottom: 6rem;
+  }
+
+  .lg\:ml-auto {
+    margin-left: auto;
+  }
+
+  .lg\:mr-28 {
+    margin-right: 7rem;
+  }
+
+  .lg\:mr-auto {
+    margin-right: auto;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:mt-40 {
+    margin-top: 10rem;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:max-w-\[569px\] {
+    max-width: 569px;
+  }
+
+  .lg\:columns-3 {
+    -moz-columns: 3;
+         columns: 3;
+  }
+
+  .lg\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .lg\:pr-12 {
+    padding-right: 3rem;
+  }
+
+  .lg\:\!text-sm {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+
+  .lg\:\!leading-4 {
+    line-height: 1rem !important;
+  }
+}
+</style><script type="module" src="./Welcome to Astro._files/client"></script>
+<script type="module" src="./Welcome to Astro._files/hmr.js"></script>
+<script type="module" src="./Welcome to Astro._files/global.css"></script></head>
+  <body>
+    <header class="pt-12 absolute top-0 w-full left-0 right-0 z-50">
+  <div class="container wrapper">
+    <div class="flex items-center">
+      <div class="mr-auto">
+        <svg width="209" height="36" viewBox="0 0 209 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M39.6506 7.49414L43.8895 23.8178L48.2641 7.49414H51.7846L55.9916 23.6564L60.2305 7.49414H62.5934L57.1252 28.0399H53.4291L49.3578 12.1465L45.047 28.0399H41.351L35.8428 7.49414H39.6346H39.6506Z" fill="#F1E2A6"></path>
+              <path d="M65.1562 2.23206C65.1562 0.968122 66.0424 0 67.2398 0C68.3654 0 69.2914 0.959157 69.2914 2.23206C69.2914 3.50496 68.3654 4.45515 67.2398 4.45515C66.0424 4.45515 65.1562 3.496 65.1562 2.23206ZM65.4277 7.49399H69.02V28.0397H65.4277V7.49399Z" fill="#F1E2A6"></path>
+              <path d="M72.0617 23.4323L73.5625 22.2759C74.7918 24.7679 76.7077 26.005 79.2702 26.005C81.8328 26.005 83.4054 24.6604 83.4054 22.509C83.4054 20.4741 82.0722 19.8198 78.7514 18.8964L78.0329 18.7082C74.4406 17.6684 72.6285 15.6783 72.6285 12.7919C72.6285 9.14349 75.191 7.10864 79.0228 7.10864C82.8546 7.10864 85.0419 9.10765 86.1355 11.5997L84.6347 12.756C83.3655 10.4881 81.9685 9.52895 79.6774 9.52895C77.3863 9.52895 76.2926 10.4074 76.2926 12.1823C76.2607 13.6435 77.2186 14.3696 78.2085 14.8716C78.5199 15.024 79.2702 15.2212 79.5097 15.3287C79.7811 15.3646 80.6353 15.5977 80.779 15.6335C84.7465 16.5568 87.0695 18.2062 87.0695 21.8905C87.0695 24.006 86.3511 25.6554 84.9461 26.7669C83.5411 27.8785 81.8008 28.4163 79.6454 28.4163C75.7817 28.4163 73.1793 26.498 72.0537 23.4233L72.0617 23.4323Z" fill="#F1E2A6"></path>
+              <path d="M104.855 23.0469L106.292 24.1226C104.959 26.5787 102.429 28.4253 98.8682 28.4253C96.0982 28.4253 93.8071 27.4303 91.995 25.4313C90.1829 23.4323 89.2568 20.9403 89.2568 17.9463C89.2568 14.9523 90.111 12.4155 91.8193 10.3089C93.5596 8.19337 95.715 7.11768 98.3174 7.11768C100.776 7.11768 102.828 8.07683 104.44 10.04C106.045 12.0031 106.867 14.6475 106.867 18.027H92.8811C92.9529 20.1784 93.5277 22.0608 94.6213 23.6296C95.7469 25.2072 97.3914 26.014 99.5787 26.014C101.766 26.014 103.171 25.1714 104.847 23.0559L104.855 23.0469ZM95.0444 11.2591C94.0546 12.4155 93.4 13.8676 93.0966 15.6336H103.355C103.323 14.0559 102.772 12.6396 101.782 11.4115C100.792 10.1475 99.6585 9.52901 98.3972 9.52901C97.1359 9.52901 96.0343 10.1027 95.0444 11.2591Z" fill="#F1E2A6"></path>
+              <path d="M0 25.6822V21.6394L11.4155 17.6952L0 14.1992V10.1833L13.4432 5.01099L26.8864 10.1833V13.751L15.4708 17.6952L26.8864 21.6842V25.2071L13.4432 30.3794L0 25.7091V25.6822ZM2.30705 23.4233L13.4432 27.0806L24.5793 23.4233L13.4432 19.8466L2.30705 23.4233ZM2.30705 11.9492L13.4432 15.5259L24.5793 11.9492L13.4432 8.29185L2.30705 11.9492Z" fill="#F1E2A6"></path>
+              <path d="M112.71 21.4242C112.71 15.3107 117.005 7.62842 122.816 7.62842C125.139 7.62842 126.88 8.66826 126.88 10.8824C126.88 12.7021 125.371 15.8306 118.865 17.5248L115.145 18.4391C115.025 19.219 114.913 20.1334 114.913 20.9132C114.913 24.6871 116.542 26.5068 118.745 26.5068C120.254 26.5068 121.994 25.467 123.511 23.3873L124.325 22.213L124.908 22.8674L124.325 23.9072C122.353 27.0267 120.142 28.3355 118.051 28.3355C114.913 28.3355 112.71 25.8614 112.71 21.4331V21.4242ZM118.633 16.6105C123.399 15.1762 124.676 12.8366 124.676 11.0168C124.676 9.45709 123.631 8.67722 122.122 8.67722C118.873 8.67722 116.198 13.231 115.384 17.6593L118.633 16.6194V16.6105Z" fill="#F1E2A6"></path>
+              <path d="M131.989 9.70833L129.315 9.31391V8.79399L133.841 8.01412H134.424V8.40853L130.943 23.1186H131.175L134.08 16.2163C137.218 8.92845 138.958 7.75415 140.818 7.75415C143.492 7.75415 144.418 10.0938 143.261 14.3966L140.706 23.8985C140.243 25.4583 140.475 26.3726 141.289 26.3726C141.983 26.3726 142.446 25.5927 143.261 23.8985L144.538 21.1645L145.233 21.5589L143.955 24.2929C142.678 26.8925 141.864 27.8068 140.475 27.8068C138.846 27.8068 137.92 26.5071 138.734 23.3786L141.289 14.0111C142.103 11.0171 141.64 9.45734 140.012 9.45734C138.503 9.45734 137.337 10.8916 133.162 19.6137L130.488 25.4672L130.025 27.5469H127.934L131.997 9.71729L131.989 9.70833Z" fill="#F1E2A6"></path>
+              <path d="M147.556 21.4242C147.556 15.3107 151.85 7.62842 157.662 7.62842C159.985 7.62842 161.725 8.66826 161.725 10.8824C161.725 12.7021 160.217 15.8306 153.71 17.5248L149.99 18.4391C149.871 19.219 149.759 20.1334 149.759 20.9132C149.759 24.6871 151.387 26.5068 153.591 26.5068C155.099 26.5068 156.84 25.467 158.357 23.3873L159.171 22.213L159.754 22.8674L159.171 23.9072C157.199 27.0267 154.988 28.3355 152.896 28.3355C149.759 28.3355 147.556 25.8614 147.556 21.4331V21.4242ZM153.479 16.6105C158.245 15.1762 159.522 12.8366 159.522 11.0168C159.522 9.45709 158.476 8.67722 156.967 8.67722C153.718 8.67722 151.044 13.231 150.23 17.6593L153.479 16.6194V16.6105Z" fill="#F1E2A6"></path>
+              <path d="M166.954 9.70838L164.28 9.31395V8.79403L168.806 8.01416H169.389V8.40857L165.908 23.1187H166.259L169.508 15.1765C171.6 9.96833 172.877 8.01416 175.2 8.01416H175.551V10.6137H175.088C172.414 10.6137 171.368 12.308 168.702 18.4215L165.333 25.9693L164.982 27.529H162.891L166.954 9.6994V9.70838Z" fill="#F1E2A6"></path>
+              <path d="M171.712 32.1007C171.712 29.8865 173.34 28.0668 175.663 26.6326L176.821 25.7182C175.663 24.8039 175.775 23.1186 177.284 21.4244L178.33 20.1246C177.052 19.2103 176.358 17.785 176.358 15.8308C176.358 11.537 180.078 7.62866 184.836 7.62866C185.882 7.62866 186.696 7.88861 187.51 8.28303C188.556 7.3687 191.23 6.32887 192.507 6.20337H192.739V8.28303C191.11 8.28303 189.602 8.4175 188.093 8.543C189.37 9.45734 190.065 10.8826 190.065 12.8368C190.065 17.1306 186.345 21.039 181.699 21.039C180.653 21.039 179.727 20.779 178.912 20.3846L178.449 21.6844C178.098 22.5987 177.755 23.5041 177.867 24.024L183.79 24.5439C187.039 24.8039 188.787 25.9782 188.787 28.1923C188.787 32.3606 183.096 36.0001 177.523 36.0001C173.803 36.0001 171.72 34.4403 171.72 32.0917L171.712 32.1007ZM178.33 35.0947C182.625 35.0947 186.576 32.1007 186.576 29.2411C186.576 27.8069 185.65 26.9015 183.207 26.6415L178.441 26.2471C178.09 26.2471 177.747 26.1126 177.396 25.9871L176.35 27.027C174.49 28.8467 173.676 30.2809 173.676 31.7152C173.676 33.7949 175.416 35.1036 178.322 35.1036L178.33 35.0947ZM182.162 20.1246C185.411 20.1246 187.965 16.2163 187.965 12.7023C187.965 10.1028 186.456 8.53403 184.365 8.53403C181.228 8.53403 178.673 12.1824 178.673 15.9563C178.553 18.6904 180.07 20.1246 182.154 20.1246H182.162Z" fill="#F1E2A6"></path>
+              <path d="M205.631 7.36841L205.28 9.8425C206.909 9.8425 207.723 10.8823 207.723 13.3564C207.723 18.0447 205.049 24.5526 200.403 28.8464L201.217 11.7967C201.337 9.45705 200.171 7.88833 198.662 7.88833C197.505 7.88833 196.339 8.5427 195.294 10.8823L194.248 13.222L194.831 13.4819L195.757 11.6622C196.683 9.8425 197.154 9.44807 197.848 9.44807C198.774 9.44807 199.006 10.3624 198.894 11.6622L198.311 30.5406C197.497 31.0605 194.36 33.0147 190.647 34.0545L190.999 35.8743C203.428 31.186 208.649 21.1642 209 11.9222C209 8.80267 207.843 7.36841 205.631 7.36841Z" fill="#F1E2A6"></path>
+            </svg>
+      </div>
+      <div class="main-menu lg:flex items-center">
+        <button id="close-menu" class="absolute top-6 right-6 lg:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_153_1673)">
+              <path d="M23.5 0.5L0.5 23.5" stroke="#F1E2A6" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M23.5 23.5L0.5 0.5" stroke="#F1E2A6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clippath id="clip0_153_1673">
+                <rect width="24" height="24" fill="white"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </button>
+        <nav class="text-white">
+          <ul class="lg:flex lg:gap-12 lg:items-center">
+            <li>
+                  <a class="p-3 lg:p-0 block !text-2xl lg:!text-sm lg:!leading-4 small-text" href="http://localhost:3000/o-firmie">
+                    O firmie
+                  </a>
+                </li><li>
+                  <a class="p-3 lg:p-0 block !text-2xl lg:!text-sm lg:!leading-4 small-text" href="http://localhost:3000/wise-energy">
+                    Wise energy
+                  </a>
+                </li><li>
+                  <a class="p-3 lg:p-0 block !text-2xl lg:!text-sm lg:!leading-4 small-text" href="http://localhost:3000/pv-dla-msp">
+                    PV dla MŚP
+                  </a>
+                </li><li>
+                  <a class="p-3 lg:p-0 block !text-2xl lg:!text-sm lg:!leading-4 small-text" href="http://localhost:3000/case-study">
+                    Case Study
+                  </a>
+                </li><li>
+                  <a class="p-3 lg:p-0 block !text-2xl lg:!text-sm lg:!leading-4 small-text" href="http://localhost:3000/dla-biznesu">
+                    Dla biznesu
+                  </a>
+                </li>
+            <li class="mt-10 lg:mt-0">
+              <a class="btn-small secondary mx-auto lg:mx-none" href="http://localhost:3000/kontakt">
+                Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button class="ml-10"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_145_4397)">
+            <path d="M0.5 8.5C0.5 10.6217 1.34285 12.6566 2.84315 14.1569C4.34344 15.6571 6.37827 16.5 8.5 16.5C10.6217 16.5 12.6566 15.6571 14.1569 14.1569C15.6571 12.6566 16.5 10.6217 16.5 8.5C16.5 6.37827 15.6571 4.34344 14.1569 2.84315C12.6566 1.34285 10.6217 0.5 8.5 0.5C6.37827 0.5 4.34344 1.34285 2.84315 2.84315C1.34285 4.34344 0.5 6.37827 0.5 8.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M14.156 14.156L23.5 23.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
+          <defs>
+            <clippath id="clip0_145_4397">
+              <rect width="24" height="24" fill="white"></rect>
+            </clippath>
+          </defs>
+        </svg>
+      </button>
+      <button id="open-menu" class="lg:hidden ml-8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 burger">
+          <path d="M3 7H21" stroke="#F1E2A6" stroke-width="1" stroke-linecap="round"></path>
+          <path d="M3 12H21" stroke="#F1E2A6" stroke-width="1" stroke-linecap="round"></path>
+          <path d="M3 17H21" stroke="#F1E2A6" stroke-width="1" stroke-linecap="round"></path>
+        </svg></button>
+    </div>
+  </div>
+</header>
+    
+  <main>
+    <section style="background:#750843" class="bg-bordo-100 pt-52 pb-28 relative">
+  <div class="container wrapper text-white lg:flex relative z-20">
+    <div class="max-w-[482px]">
+      <h1 class="mb-4  ">Sprzedaż</h1>
+      <h2 class="victorserif">Pełne informacje o naszym procesie</h2>
+    </div>
+    <div class="max-w-[648px]">
+      <p class="small undefined">
+        Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia
+      </p>
+    </div>
+  </div>
+  <img src="./Welcome to Astro._files/hero-1.png" class="absolute left-0 top-0 w-full h-full object-cover">
+  
+</section>
+    <section class="py-20">
+      <div class="container wrapper">
+        <div class="lg:flex lg:gap-20 items-center">
+          <img src="./Welcome to Astro._files/farm.png" alt="Farma słoneczna" width="478px" class="mb-8 lg:mb-0 rounded-lg">
+          <div>
+            <h4 class="mb-8   text-bordo-100">
+              <span class="victorserif">Usprawnij</span> obieg faktur w firmie, <span class="victorserif">niezależnie od poziomu</span>
+              skomplikowania matrycy <span class="victorserif">akceptacji</span>. <span class="victorserif">Zyskaj</span> lepsza kontrolę nad wydatkami.
+            </h4>
+            <p class="text-grey-200 mb-8">
+              Działamy w niszy najmu infrastruktury i sprzętu wraz z
+              finansowaniem dla MŚP w Polsce. Nasza oferta ma na celu szerokie
+              wsparcie przedsiębiorstw w zakresie dostarczenia wszelkich środków
+              trwałych niezbędnych do sprawnego, efektywnego a przede wszystkim
+              elastycznego działania przedsiębiorcy. Nasza oferta ma na celu
+              szerokie wsparcie przedsiębiorstw w zakresie dostarczenia Nasza
+              oferta ma na celu szerokie wsparcie przedsiębiorstw w zakresie
+              dostarczenia
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-grey-500">
+  <div class="container wrapper">
+    <h2 class="text-bordo-200 mb-20  ">
+      Galeria <span class="victorserif">naszych produktów</span>
+    </h2>
+    <div class="swiper products-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-4">
+                  <img class="rounded-lg" alt="Argument lorem ipsum" src="./Welcome to Astro._files/product-1.png">
+                </article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-4">
+                  <img class="rounded-lg" alt="Argument lorem ipsum" src="./Welcome to Astro._files/product-2.png">
+                </article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-4">
+                  <img class="rounded-lg" alt="Argument lorem ipsum" src="./Welcome to Astro._files/product-3.png">
+                </article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-4">
+                  <img class="rounded-lg" alt="Argument lorem ipsum" src="./Welcome to Astro._files/product-1.png">
+                </article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-4">
+                  <img class="rounded-lg" alt="Argument lorem ipsum" src="./Welcome to Astro._files/product-2.png">
+                </article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-4">
+                  <img class="rounded-lg" alt="Argument lorem ipsum" src="./Welcome to Astro._files/product-3.png">
+                </article>
+              </div>
+      </div>
+      <div class="slider-navigation">
+        <button class="swiper-button-prev nav-prev"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.5333 0.666687L7.76668 15.5014C7.69619 15.5639 7.63975 15.6407 7.60111 15.7266C7.56246 15.8126 7.54248 15.9058 7.54248 16C7.54248 16.0943 7.56246 16.1874 7.60111 16.2734C7.63975 16.3594 7.69619 16.4361 7.76668 16.4987L24.5333 31.3334" stroke="#60113D" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-button-next nav-next">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_266_1261)">
+              <path d="M7.46665 31.3333L24.2333 16.4986C24.3038 16.4361 24.3602 16.3593 24.3989 16.2734C24.4375 16.1874 24.4575 16.0942 24.4575 16C24.4575 15.9057 24.4375 15.8126 24.3989 15.7266C24.3602 15.6406 24.3038 15.5639 24.2333 15.5013L7.46665 0.666647" stroke="#60113D" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clippath id="clip0_266_1261">
+                <rect width="32" height="32" fill="white" transform="translate(32 32) rotate(180)"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="py-32 bg-white">
+  <div class="max-w-[956px] mx-auto flex items-center">
+    <div class="text-bordo-300 max-w-[419px] mr-auto">
+      <h2 class="mb-6">
+        <span class=" ">Zamów kontakt</span>
+        <br>
+        <span class="victorserif">z naszym sprzedawcą</span>
+      </h2>
+      <h4 class="victorserif">
+        Jeśli chcesz dowiedzieć się o naszych produktach lub chcesz dokonać
+        zakupu
+      </h4>
+    </div>
+    <form class="w-full max-w-[464px] grid gap-8">
+      <div class="relative custom-input  undefined">
+  <input id="data" type="date" name="data" placeholder="Wybierz datę kontaktu">
+  <label for="data">Wybierz datę kontaktu</label>
+  
+</div>
+      <div class="relative custom-input  undefined">
+  <input id="name" type="text" name="name" placeholder="Imię i nazwisko">
+  <label for="name">Imię i nazwisko</label>
+  
+</div>
+      <div class="relative custom-input  undefined">
+  <input id="mail" type="mail" name="mail" placeholder="E-mail">
+  <label for="mail">E-mail</label>
+  
+</div>
+
+      <button type="button" class="btn primary full w-full">Wyślij</button>
+    </form>
+  </div>
+</section>
+    <section class="py-20 bg-grey-500">
+  <div class="container wrapper">
+    <h2 class="text-bordo-200 victorserif">Referencje</h2>
+    <h4 class="text-bordo-200 mb-20  ">
+      Zobacz, <span class="victorserif">co mówią klienci</span>, którzy
+      korzystają z naszych usług
+    </h4>
+    <div class="swiper references-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-12">
+  <div class="text-bordo-100 flex gap-5 mb-5">
+    <img class="rounded self-center" alt="Argument lorem ipsum" src="./Welcome to Astro._files/reference-1.png">
+    <div>
+      <h3 class="  text-[20px] leading-7">Kamil Nowicki</h3>
+      <p class="text-bordo-300 text-[12px]">Prezes zarządu NODU</p>
+    </div>
+  </div>
+
+  <p class="small text-bordo-200">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.
+  </p>
+</article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-12">
+  <div class="text-bordo-100 flex gap-5 mb-5">
+    <img class="rounded self-center" alt="Argument lorem ipsum" src="./Welcome to Astro._files/reference-1.png">
+    <div>
+      <h3 class="  text-[20px] leading-7">Kamil Nowicki</h3>
+      <p class="text-bordo-300 text-[12px]">Prezes zarządu NODU</p>
+    </div>
+  </div>
+
+  <p class="small text-bordo-200">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.
+  </p>
+</article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-12">
+  <div class="text-bordo-100 flex gap-5 mb-5">
+    <img class="rounded self-center" alt="Argument lorem ipsum" src="./Welcome to Astro._files/reference-1.png">
+    <div>
+      <h3 class="  text-[20px] leading-7">Kamil Nowicki</h3>
+      <p class="text-bordo-300 text-[12px]">Prezes zarządu NODU</p>
+    </div>
+  </div>
+
+  <p class="small text-bordo-200">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.
+  </p>
+</article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-12">
+  <div class="text-bordo-100 flex gap-5 mb-5">
+    <img class="rounded self-center" alt="Argument lorem ipsum" src="./Welcome to Astro._files/reference-1.png">
+    <div>
+      <h3 class="  text-[20px] leading-7">Kamil Nowicki</h3>
+      <p class="text-bordo-300 text-[12px]">Prezes zarządu NODU</p>
+    </div>
+  </div>
+
+  <p class="small text-bordo-200">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.
+  </p>
+</article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-12">
+  <div class="text-bordo-100 flex gap-5 mb-5">
+    <img class="rounded self-center" alt="Argument lorem ipsum" src="./Welcome to Astro._files/reference-1.png">
+    <div>
+      <h3 class="  text-[20px] leading-7">Kamil Nowicki</h3>
+      <p class="text-bordo-300 text-[12px]">Prezes zarządu NODU</p>
+    </div>
+  </div>
+
+  <p class="small text-bordo-200">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.
+  </p>
+</article>
+              </div><div class="swiper-slide">
+                <article class="bg-white rounded-2xl p-12">
+  <div class="text-bordo-100 flex gap-5 mb-5">
+    <img class="rounded self-center" alt="Argument lorem ipsum" src="./Welcome to Astro._files/reference-1.png">
+    <div>
+      <h3 class="  text-[20px] leading-7">Kamil Nowicki</h3>
+      <p class="text-bordo-300 text-[12px]">Prezes zarządu NODU</p>
+    </div>
+  </div>
+
+  <p class="small text-bordo-200">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.
+  </p>
+</article>
+              </div>
+      </div>
+      <div class="slider-navigation">
+        <button class="swiper-button-prev nav-prev"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.5333 0.666687L7.76668 15.5014C7.69619 15.5639 7.63975 15.6407 7.60111 15.7266C7.56246 15.8126 7.54248 15.9058 7.54248 16C7.54248 16.0943 7.56246 16.1874 7.60111 16.2734C7.63975 16.3594 7.69619 16.4361 7.76668 16.4987L24.5333 31.3334" stroke="#60113D" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-button-next nav-next">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_266_1261)">
+              <path d="M7.46665 31.3333L24.2333 16.4986C24.3038 16.4361 24.3602 16.3593 24.3989 16.2734C24.4375 16.1874 24.4575 16.0942 24.4575 16C24.4575 15.9057 24.4375 15.8126 24.3989 15.7266C24.3602 15.6406 24.3038 15.5639 24.2333 15.5013L7.46665 0.666647" stroke="#60113D" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clippath id="clip0_266_1261">
+                <rect width="32" height="32" fill="white" transform="translate(32 32) rotate(180)"></rect>
+              </clippath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+    <footer class="bg-bordo-100 pt-28 pb-36">
+  <div class="container px-8 lg:px-16 lg:flex">
+    <div class="lg:mr-auto mb-8 lg:mb-0">
+      <a href="http://localhost:3000/">
+        <img class="mb-4 lg:mb-24" src="./Welcome to Astro._files/sygnet.svg">
+        <img src="./Welcome to Astro._files/logo-text.svg">
+      </a>
+    </div>
+    <div class="mb-8 lg:mb-0">
+      <h3 class="text-yellow-700 mb-2">
+        <span class="mr-1 victorserif">Na</span><span class=" ">skróty</span>
+      </h3>
+      <nav class="w-full max-w-[516px]">
+        <ul class="columns-2 lg:columns-3 gap-6">
+          <li class="py-4">
+                <a href="http://localhost:3000/faq" class="text-yellow-600 small-text py-2">
+                  FAQ
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/aktualnosci" class="text-yellow-600 small-text py-2">
+                  Aktualności
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/o-firmie" class="text-yellow-600 small-text py-2">
+                  O firmie
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/wise-energy" class="text-yellow-600 small-text py-2">
+                  Wise energy
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/pv-dla-msp" class="text-yellow-600 small-text py-2">
+                  PV dla MŚP
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/case-study" class="text-yellow-600 small-text py-2">
+                  Case study
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/cookies" class="text-yellow-600 small-text py-2">
+                  Ustawienia cookies
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/polityka-prywatnosci" class="text-yellow-600 small-text py-2">
+                  Polityka prywatności
+                </a>
+              </li><li class="py-4">
+                <a href="http://localhost:3000/kontakt" class="text-yellow-600 small-text py-2">
+                  Kontakt
+                </a>
+              </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="lg:ml-auto w-full max-w-[200px]">
+      <h3 class="text-yellow-700 mb-2">
+        <span class="mr-1 victorserif">Social</span><span class=" ">media</span>
+      </h3>
+      <nav class="w-full max-w-[516px]">
+        <ul class="">
+          <li class="py-4">
+            <a href="http://localhost:3000/%7Bitem.link%7D" class="text-yellow-600 small-text py-2 flex items-center">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-4">
+                <path d="M11.8453 4.99992H8.99999V3.73325C8.98735 3.63899 8.99561 3.5431 9.02419 3.45239C9.05277 3.36168 9.10096 3.27837 9.16535 3.20837C9.22975 3.13838 9.30876 3.08342 9.39678 3.0474C9.4848 3.01137 9.57967 2.99516 9.67466 2.99992C9.95332 2.99992 11.6667 3.00659 11.6667 3.00659V0.333252H8.78066C6.16266 0.333252 5.66666 2.31592 5.66666 3.56992V4.99992H3.66666V7.66659H5.66666V15.6666H8.99999V7.66659H11.5673L11.8453 4.99992Z" fill="#F1E2A6"></path>
+              </svg>
+
+              Facebook
+            </a>
+          </li>
+          <li class="py-4">
+            <a href="http://localhost:3000/%7Bitem.link%7D" class="text-yellow-600 small-text py-2 flex items-center">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-4">
+                <path d="M4.33333 15.0001H1V6.33341H4.33333V15.0001ZM10.3333 9.00008C9.97971 9.00008 9.64057 9.14056 9.39053 9.39061C9.14048 9.64065 9 9.97979 9 10.3334V15.0001H5.66667V6.33341H9V7.32341C9.7442 6.69268 10.6846 6.34033 11.66 6.32675C13.6347 6.32675 15 7.79341 15 10.5634V15.0001H11.6667V10.3334C11.6667 9.97979 11.5262 9.64065 11.2761 9.39061C11.0261 9.14056 10.687 9.00008 10.3333 9.00008ZM4.33333 3.33341C4.33333 3.66305 4.23559 3.98528 4.05245 4.25936C3.86931 4.53345 3.60902 4.74707 3.30447 4.87321C2.99993 4.99936 2.66482 5.03237 2.34152 4.96806C2.01822 4.90375 1.72124 4.74501 1.48816 4.51193C1.25507 4.27884 1.09633 3.98187 1.03203 3.65857C0.967717 3.33526 1.00072 3.00015 1.12687 2.69561C1.25301 2.39107 1.46664 2.13077 1.74072 1.94763C2.0148 1.7645 2.33703 1.66675 2.66667 1.66675C3.1087 1.66675 3.53262 1.84234 3.84518 2.1549C4.15774 2.46746 4.33333 2.89139 4.33333 3.33341Z" fill="#F1E2A6"></path>
+              </svg>
+
+              Linked In
+            </a>
+          </li>
+          <li class="py-4">
+            <a href="http://localhost:3000/%7Bitem.link%7D" class="text-yellow-600 small-text py-2 flex items-center">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-4">
+                <path d="M15.3333 4.41857L14 4.08524L14.6667 2.75191L13.024 3.21857C12.5975 2.8207 12.0639 2.55641 11.4889 2.45831C10.914 2.36022 10.3229 2.43262 9.78859 2.66658C9.25431 2.90054 8.80022 3.28582 8.48238 3.77487C8.16453 4.26391 7.99684 4.83532 7.99999 5.41857V6.08524C5.64066 6.57191 3.57732 5.28524 1.66666 3.08524C1.33332 4.86302 1.66666 6.19635 2.66666 7.08524L0.666656 6.75191C0.936656 8.13124 1.57466 9.21857 3.33332 9.41857L1.66666 10.0852C2.33332 11.4186 3.37732 11.6252 4.99999 11.7519C3.73794 12.6537 2.21734 13.1215 0.666656 13.0852C9.16999 16.8646 14 11.3092 14 6.41857V5.53324L15.3333 4.41857Z" fill="#F1E2A6"></path>
+              </svg>
+
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+  
+<link rel="stylesheet" href="./Welcome to Astro._files/swiper-bundle.min.css"></body></html>

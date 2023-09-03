@@ -1,0 +1,75 @@
+---
+---
+
+<section class="py-20">
+  <div class="container wrapper">
+    <h2 class="victorserif mb-12 text-bordo-200">Zarząd spółki</h2>
+    <div class="grid gap-20">
+      {
+        [1, 2, 3].map((item) => {
+          return (
+            <div class="lg:flex lg:gap-20 items-center  inView slideUp">
+              <img
+                src="/assets/images/person.png"
+                alt="Person"
+                width="427px"
+                class="mb-8 lg:mb-0 rounded-lg"
+              />
+              <div>
+                <svg
+                  width="15"
+                  height="12"
+                  viewBox="0 0 15 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="mb-5"
+                >
+                  <path
+                    d="M6.872 1.6C3.992 2.816 3.608 4.544 4.76 5.632C5.4 6.272 6.552 7.04 6.552 8.512C6.552 10.24 5.208 11.456 3.416 11.456C1.56 11.456 0.216001 10.112 0.216001 7.808C0.216001 4.8 2.456 1.536 6.552 0.447998L6.872 1.6ZM8.344 7.808C8.344 4.8 10.584 1.536 14.68 0.447998L15 1.6C12.12 2.816 11.736 4.544 12.888 5.632C13.528 6.272 14.68 7.04 14.68 8.512C14.68 10.24 13.336 11.456 11.544 11.456C9.688 11.456 8.344 10.112 8.344 7.808Z"
+                    fill="#750843"
+                  />
+                </svg>
+
+                <p class="text-grey-200 mb-8">
+                  Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos. Class aptent taciti sociosqu
+                  ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <p class="text-bordo-100 mb-4 font-normal  ">
+                  Imię i nazwisko
+                </p>
+                <p class="text-bordo-100 small-text">Prezes zarządu</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="lg:flex lg:gap-20 mt-20">
+      <h2 class="victorserif mb-12 lg:min-w-[427px] text-bordo-100">
+        Rada nadzorcza
+      </h2>
+      <div>
+        {
+          [1, 2, 3, 4].map((item) => (
+            <div class="inView slideUp mb-16">
+              <span class="text-2xl   text-bordo-100 mb-8 block">
+                Robert XXXXXX -{" "}
+                <span class="victorserif">Przewodniczący Rady Nadzorczej</span>
+              </span>
+              <p class="small text-grey-200 !leading-[180%]">
+                Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

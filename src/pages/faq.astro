@@ -1,0 +1,207 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import Persons from "../components/Persons.astro";
+import Partners from "../components/Partners.astro";
+import Instagram from "../components/Instagram.astro";
+import Film from "../components/Film.astro";
+import AppointmentForm from "../components/AppointmentForm.astro";
+import WhyUs from "../components/WhyUs.astro";
+import Newsletter from "../components/Newsletter.astro";
+const category_1 = [
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.  Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+  },
+];
+const hero = {
+  bg: "#750843",
+  title: "FAQ",
+  subtitle: "baza wiedzy Wise finance",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  button_link: "/faq",
+};
+---
+
+<Layout title="Wise energy" textdark={false} isHome={false}>
+  <main>
+    <HeroHeader
+      bg={hero.bg}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+      button_link={hero.button_link}
+    />
+    <section class="py-20">
+      <div class="container wrapper">
+        <div class="lg:flex lg:gap-20 faq-category-contet">
+          <div class="max-w-[478px] w-full mb-12 lg:mb-0">
+            <img
+              src="/assets/images/faq_1.png"
+              alt="Farma słoneczna"
+              width="478px"
+              class="mb-8 rounded-lg"
+            />
+            <p class="small">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent.
+            </p>
+          </div>
+
+          <div class="accordion grid gap-8 w-full">
+            {
+              category_1.map((item, index) => (
+                <>
+                  <input type="radio" id={`acc1_${index}`} name="acc1" />
+                  <div class="accordion-item border-b-[0.5px] border-bordo-100 last-of-type:border-0">
+                    <label
+                      for={`acc1_${index}`}
+                      class="accordion-title   cursor-pointer flex items-center text-bordo-200 text-[20px] leading-[28px]"
+                    >
+                      <span class="flex-1">{item.title}</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto acccordion-icon"
+                      >
+                        <g clip-path="url(#clip0_156_2628)">
+                          <path
+                            d="M0.499999 5.60011L11.626 18.1751C11.6729 18.228 11.7305 18.2703 11.795 18.2993C11.8594 18.3283 11.9293 18.3433 12 18.3433C12.0707 18.3433 12.1406 18.3283 12.205 18.2993C12.2695 18.2703 12.3271 18.228 12.374 18.1751L23.5 5.60011"
+                            stroke="#750843"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_156_2628">
+                            <rect
+                              width="24"
+                              height="24"
+                              fill="white"
+                              transform="translate(0 24) rotate(-90)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </label>
+                    <label
+                      for="acc_close"
+                      class="accordion-close h-[80px] cursor-pointer"
+                    />
+                    <div class="accordion-content  pt-4 lg:pt-12 pr-8 lg:pr-16">
+                      <p class="small">{item.description}</p>
+                    </div>
+                  </div>
+                </>
+              ))
+            }
+            <input id="acc_close" type="radio" name="acc1" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <Film />
+    <section class="py-16 overflow-hidden">
+      <div class="container wrapper">
+        <div class="lg:flex relative">
+          <div class="lg:pr-20 relative mb-16 lg:mb-0">
+            <h2
+              class="text-bordo-200 relative mt-16 mb-4 bg-white z-20 max-w-max pr-7"
+            >
+              <span class=" ">Wise</span>
+              <span class="victorserif">finance</span>
+            </h2>
+            <div
+              class="lg:absolute line-after top-[24px] lg:top-[96px] z-10 w-[200%] lg:w-[100%]"
+            >
+            </div>
+            <h4
+              class="  text-bordo-200 px-4 py-2 bg-grey-400 rounded-lg max-w-max mb-8"
+            >
+              Podtytuł lorem ipsum dolor sit amet
+            </h4>
+            <div class="inView slideUp">
+              <p class="mb-4 text-bordo-200 font-light">Platforma dla firm</p>
+              <p class="text-grey-200 mb-8 font-light small">
+                Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
+                condimentum lobortis.
+              </p>
+              <a class="btn primary full">Dowiedz się więcej</a>
+            </div>
+          </div>
+          <img
+            src="/assets/images/partner-person-1.png"
+            alt="Person"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg inView slideUp"
+          />
+        </div>
+      </div>
+    </section>
+    <WhyUs />
+    <Newsletter />
+  </main>
+</Layout>
+<link rel="stylesheet" href="/assets/css/accordion.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script
+  is:inline
+  src="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js
+"
+></script>
+
+<link
+  href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css
+"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/assets/css/datepicker.css" />
+<script is:inline src="/assets/js/script.js"></script>

@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import WhyUs from "../components/WhyUs.astro";
+
+const hero = {
+  bg: "#750843",
+  title: "Kontakt",
+  subtitle: "Nasza oferta dla Ciebie",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  button_link: "/kontakt",
+};
+---
+
+<Layout title="Wise energy">
+  <main>
+    <HeroHeader
+      bg={hero.bg}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+      button_link={hero.button_link}
+    />
+    <ContactForm />
+    <WhyUs />
+  </main>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script is:inline src="/assets/js/script.js"></script>

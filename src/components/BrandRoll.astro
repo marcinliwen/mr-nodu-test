@@ -1,0 +1,66 @@
+---
+---
+<section class="py-20 bg-second-200/10 ">
+    <div class="container wrapper max-w-[1274px]">
+      <h2 class="text-main-200 mb-8 text-center lora font-semibold text-[30px] inView slideUp">Znajdziesz nas w sklepach</h2>
+      <div class="swiper brand-swiper">
+        <div class="swiper-wrapper ">
+          {
+            [1, 2, 3, 4, 5, 6].map((item, index) => {
+              return (
+                <div class="swiper-slide">
+                 <img src="../../public/assets/images/brand-1-logo.png" class="mx-auto mb-14"/>
+                 <img src="../../public/assets/images/brand-1-img.png" class="mx-auto"/>
+                </div>
+              );
+            })
+          }
+        </div>
+        <div class="slider-navigation">
+          <button class="swiper-button-prev nav-prev"
+            ><svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24.5333 0.666687L7.76668 15.5014C7.69619 15.5639 7.63975 15.6407 7.60111 15.7266C7.56246 15.8126 7.54248 15.9058 7.54248 16C7.54248 16.0943 7.56246 16.1874 7.60111 16.2734C7.63975 16.3594 7.69619 16.4361 7.76668 16.4987L24.5333 31.3334"
+                stroke="#60113D"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-next nav-next">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_266_1261)">
+                <path
+                  d="M7.46665 31.3333L24.2333 16.4986C24.3038 16.4361 24.3602 16.3593 24.3989 16.2734C24.4375 16.1874 24.4575 16.0942 24.4575 16C24.4575 15.9057 24.4375 15.8126 24.3989 15.7266C24.3602 15.6406 24.3038 15.5639 24.2333 15.5013L7.46665 0.666647"
+                  stroke="#60113D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_266_1261">
+                  <rect
+                    width="32"
+                    height="32"
+                    fill="white"
+                    transform="translate(32 32) rotate(180)"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+     
+    </div>
+  </section>

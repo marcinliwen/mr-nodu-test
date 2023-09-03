@@ -1,0 +1,57 @@
+---
+const { bg, video, image } = Astro.props;
+---
+
+<section style={`${bg && "background:" + bg}`} class="bg-bordo-100 relative">
+  <div class="swiper home-swiper h-screen relative !z-20">
+    <div class="swiper-wrapper">
+      {
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => {
+          return (
+            <div class="swiper-slide relative flex items-center img-cover md:img-cover-none">
+              <div class=" absolute left-0 right-0 z-20 top-8 lg:top-auto h-full">
+                <div class="container wrapper flex items-center h-full">
+                  <div class="items-center relative z-10">
+                    <div class="lg:max-w-[620px] pr-10 lg:pr-0">
+                      <h1 class="text-main-200   mb-6 ">
+                        Panko Mr Nodu najbardziej chrupiące
+                      </h1>
+                      <span class="mb-8 text-2xl font-normal block max-w-[435px]   md:text-main-300">chrupiące i najlepszej jakości, takie jest nasze panko!</span>
+                      <a class="btn primary full">Poznaj produkt</a>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="absolute hidden md:block top-0 bottom-0 right-0 z-10 w-[50%]">
+                <img class="w-full h-full absolute top-0 left-0 object-cover " src="../../public/assets/images/nodu-cover.svg"/>
+                  </div>
+              <img src="../../public/assets/images/home-hero.jpeg" class="w-full h-full absolute top-0 left-0 object-cover "/>
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="slider-navigation md:h-full md:absolute ">
+      <div class="wrapper w-full md:h-full">
+        <div class="container relative md:h-full"><div class="swiper-pagination !text-main-300 lora text-base"></div></div>
+      </div>
+    </div>
+   
+  </div>
+  {
+    video && (
+      <video
+        autoplay="true"
+        playsinline=""
+        loop=""
+        controlslist="nodownload"
+        poster="https://c.stocksy.com/a/XhRK00/z9/4873047.jpg"
+        src={video.link}
+        class="w-full h-full absolute top-0 left-0 object-cover z-10"
+        muted=""
+      />
+    )
+    
+  }
+</section>

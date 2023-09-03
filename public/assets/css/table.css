@@ -1,0 +1,20 @@
+.custom-table thead th:first-of-type {
+  border-radius: 8px 0 0 0;
+  padding-left: 56px;
+}
+.custom-table thead th:last-of-type {
+  border-radius: 0 8px 0 0;
+  padding-right: 56px;
+}
+.custom-table tbody tr td {
+  padding: 24px 20px;
+}
+.custom-table tbody tr td:first-of-type {
+  padding-left: 56px;
+}
+.custom-table tbody tr td:last-of-type {
+  padding-right: 56px;
+}
+.custom-table tbody tr:nth-child(2n) {
+  background: rgba(117, 8, 67, 0.1);
+}

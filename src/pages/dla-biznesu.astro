@@ -1,0 +1,224 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import AppointmentForm from "../components/AppointmentForm.astro";
+import Offer from "../components/Offer.astro";
+import Instagram from "../components/Instagram.astro";
+import Film from "../components/Film.astro";
+import BlogRoll from "../components/BlogRoll.astro";
+import HomeHero from "../components/HomeHero.astro";
+import CaseRoll from "../components/CaseRoll.astro";
+import Partners from "../components/Partners.astro";
+import ReferencesCard from "../components/ReferencesCard.astro";
+const references = [
+  {
+    image: "/assets/images/reference-1.png",
+    name: "Kamil Nowicki",
+    title: "Prezes zarządu NODU",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.`,
+  },
+  {
+    image: "/assets/images/reference-1.png",
+    name: "Kamil Nowicki",
+    title: "Prezes zarządu NODU",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.`,
+  },
+  {
+    image: "/assets/images/reference-1.png",
+    name: "Kamil Nowicki",
+    title: "Prezes zarządu NODU",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.`,
+  },
+  {
+    image: "/assets/images/reference-1.png",
+    name: "Kamil Nowicki",
+    title: "Prezes zarządu NODU",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.`,
+  },
+  {
+    image: "/assets/images/reference-1.png",
+    name: "Kamil Nowicki",
+    title: "Prezes zarządu NODU",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.`,
+  },
+  {
+    image: "/assets/images/reference-1.png",
+    name: "Kamil Nowicki",
+    title: "Prezes zarządu NODU",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Borem ipsum dolor sit amet.`,
+  },
+];
+const hero = {
+  bg: "#750843",
+  image: "/assets/images/hero-1.png",
+  title: "Dla biznesu",
+  subtitle: "Najlepsi specjaliści  z doświadczeniem.",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  video: {
+    link: "https://c.stocksy.com/a/XhRK00/y0/4873047.mp4",
+  },
+};
+---
+
+<Layout title="Wise energy" isHome={false}>
+  <main>
+    <HeroHeader
+      image={hero.image}
+      video={hero.video}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+    />
+    <section class="py-20 bg-grey-500">
+      <div class="container wrapper">
+        <h2 class="text-bordo-200 victorserif inView slideUp">
+          Niezawodny Partner
+        </h2>
+        <h4 class="text-bordo-200 mb-20   inView slideUp">
+          Zobacz, <span class="victorserif">co mówią klienci</span>, którzy
+          korzystają z naszych usług
+        </h4>
+        <div class="swiper references-swiper">
+          <div class="swiper-wrapper">
+            {
+              references.map((item, index) => {
+                return (
+                  <div class="swiper-slide">
+                    <ReferencesCard reference={item} />
+                  </div>
+                );
+              })
+            }
+          </div>
+          <div class="slider-navigation">
+            <button class="swiper-button-prev nav-prev"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.5333 0.666687L7.76668 15.5014C7.69619 15.5639 7.63975 15.6407 7.60111 15.7266C7.56246 15.8126 7.54248 15.9058 7.54248 16C7.54248 16.0943 7.56246 16.1874 7.60111 16.2734C7.63975 16.3594 7.69619 16.4361 7.76668 16.4987L24.5333 31.3334"
+                  stroke="#60113D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-next nav-next">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_266_1261)">
+                  <path
+                    d="M7.46665 31.3333L24.2333 16.4986C24.3038 16.4361 24.3602 16.3593 24.3989 16.2734C24.4375 16.1874 24.4575 16.0942 24.4575 16C24.4575 15.9057 24.4375 15.8126 24.3989 15.7266C24.3602 15.6406 24.3038 15.5639 24.2333 15.5013L7.46665 0.666647"
+                    stroke="#60113D"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_266_1261">
+                    <rect
+                      width="32"
+                      height="32"
+                      fill="white"
+                      transform="translate(32 32) rotate(180)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="lg:flex relative mt-24">
+          <div class="lg:pr-20 relative mb-8 lg:mb-0">
+            <h4
+              class="  text-bordo-200 relative lg:absolute lg:top-[-15px] left-0 block max-w-max bg-grey-500 pr-4 lg:pr-12 z-20 mb-16 lg:mb-0"
+            >
+              Lorem ipsum
+            </h4>
+            <div class="lg:absolute line-after top-[20px] lg:top-[4px] z-10">
+            </div>
+            <div class="inView slideUp">
+              <h4 class="victorserif text-bordo-200 italic mb-6 lg:mt-40">
+                Morem ipsum dolor sit amet, consectetur adipiscing.
+              </h4>
+              <p class="text-grey-200 mb-8">
+                Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
+                condimentum lobortis.
+              </p>
+              <a class="btn primary full">Zobacz nasze wdrożenia</a>
+            </div>
+          </div>
+          <img
+            src="/assets/images/partner-person-1.png"
+            alt="Person"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+    <AppointmentForm />
+    <Partners />
+  </main>
+</Layout>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script
+  is:inline
+  src="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js
+"
+></script>
+
+<link
+  href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css
+"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/assets/css/datepicker.css" />
+<script is:inline src="/assets/js/script.js"></script>

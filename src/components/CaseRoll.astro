@@ -1,0 +1,63 @@
+---
+---
+
+<section class="py-20">
+  <div class="container wrapper">
+    <h2 class="victorserif text-bordo-200">Case study</h2>
+    <h3 class="mb-14   text-bordo-200">
+      Zobacz, <span class="victorserif">gdzie pomagamy</span>
+    </h3>
+    <div class="tab-swiper swiper">
+      <div class="swiper-pagination tab-pagination mb-24"></div>
+      <div class="swiper-wrapper">
+        {
+          [1, 2, 3].map((item) => (
+            <div class="swiper-slide">
+              <div class="grid lg:grid-cols-2 lg:gap-14 relative">
+                <div class="text-bordo-200 flex flex-col">
+                  <p class=" pb-10">
+                    Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos. Gorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Nunc vulputate libero
+                    et velit interdum, ac aliquet odio mattis. Class aptent
+                    taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos.
+                  </p>
+                  <ol class="mb-8 lg:mb-10">
+                    <li class="small pb-7">
+                      Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </li>
+                    <>
+                      <li class="small pb-7">
+                        Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                      <li class="small pb-7">
+                        Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                    </>
+                  </ol>
+                  <a class="btn-text link max-w-max mb-8 lg:mb-16 cursor-pointer">
+                    Więcej
+                  </a>
+                  <p class="  text-bordo-100 text-[20px] mt-auto mb-8">
+                    Cass aptent nostra lorem
+                  </p>
+                  <div class=" hidden lg:block lg:absolute right-[40%] h-[1px] left-0 bottom-[20px] lg:bottom-[4px] bg-bordo-100" />
+                </div>
+                <img
+                  class="w-full rounded-lg relative"
+                  src="/assets/images/case-roll.png"
+                />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <a href="/casestudy" class="btn primary full mx-auto mt-16"
+      >Zobacz wszystkie case study</a
+    >
+  </div>
+</section>

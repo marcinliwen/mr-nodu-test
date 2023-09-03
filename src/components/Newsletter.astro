@@ -1,0 +1,41 @@
+---
+import Input from "../components/Input.astro";
+---
+
+<section class="py-24 bg-white">
+  <div class="container wrapper max-w-[1274px]">
+    <div class="grid md:grid-cols-2 items-start justify-between">
+      <div class="mb-8 md:mb-0 text-main-200">
+        <h2 class="mb-4 text-[50px] font-semibold leading-[60px]">Mr Nodu</h2>
+        <p class="text-2xl">
+          co wyróżnia naszą posypkę panko?
+        </p>
+      </div>
+      <div class="lg:pb-4">
+        <form>
+          <div class="w-full items-center">
+            <Input
+              id="name"
+              name="name"
+              type="text"
+              label="Imię i nazwisko"
+              placeholder="Imię i nazwisko"
+              className="flex-1 mb-10"
+            />
+            <Input
+              id="mail"
+              name="mail"
+              type="mail"
+              label="Email"
+              placeholder="Email"
+              className="flex-1 mb-14"
+            />
+            <button class="btn primary full " type="button"
+              >Zapisz się</button
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+const { title, text, subtitle, imageContent } = Astro.props;
+---
+
+<section class="bg-beige-100 pt-52 pb-28 relative">
+  <div class="container px-4 md:px-8 lg:px-16">
+    <div class="flex flex-wrap lg:flex-nowrap gap-4">
+      <div class="max-w-[596px]">
+        <h2 class="  text-bordo-200">{title}</h2>
+        <p class="small mb-6 text-bordo-200">{subtitle}</p>
+        <p class="small mb-8 text-neutral-900">{text}</p>
+        <a class="btn primary full">Czytaj więcej</a>
+      </div>
+      <div class="max-w-[700px] lg:w-full">
+        <img src={imageContent} width={700} />
+      </div>
+    </div>
+  </div>
+</section>

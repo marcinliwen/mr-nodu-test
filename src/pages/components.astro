@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import TextArea from "../components/TextArea.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Select from "../components/Select.astro";
+---
+
+<Layout title="components">
+  <main>
+    <div class="container pb-20">
+      <h1>Welcome to Astro h1</h1>
+      <h2>Welcome to Astro h2</h2>
+      <h3>Welcome to Astro h3</h3>
+      <h4>Welcome to Astro h4</h4>
+      <h5>Welcome to Astro h5</h5>
+      <p>Welcome to Astro p</p>
+      <p class="small">Welcome to Astro p - small</p>
+      <p class="btn-text">WElcome to Astro btn-text</p>
+      <p class="small-text">Welcome to Astro p - small-text</p>
+      <p class="small-stroke">Welcome to Astro p - small-stroke</p>
+      <button class="btn primary full">Button full</button>
+      <button class="btn primary outlined">Button outlinde</button>
+      <button class="btn-small primary full">Button small</button>
+      <button class="btn-small primary outlined">Button small</button>
+      <button class="btn-small secondary">Button small</button>
+      <button class="btn disabled">Button disabled</button>
+      <div class="py-12">
+        <Input
+          className="mb-8"
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Imię i nazwisko"
+          label="Imię i nazwisko"
+          error="Podaj imię"
+        />
+        <Input
+          className="mb-8"
+          id="mail"
+          name="mail"
+          type="mail"
+          placeholder="E-mail"
+          label="E-mail"
+        />
+        <TextArea />
+      </div>
+      <ContactForm />
+    </div>
+
+    <p class="instructions">
+      To get started, open the directory <code>src/pages</code> in your project.<br
+      />
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </p>
+  </main>
+</Layout>
+
+<script is:inline src="/assets/js/script.js"></script>

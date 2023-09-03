@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import AppointmentForm from "../components/AppointmentForm.astro";
+import Offer from "../components/Offer.astro";
+import Instagram from "../components/Instagram.astro";
+import Film from "../components/Film.astro";
+import BlogRoll from "../components/BlogRoll.astro";
+import HomeHero from "../components/HomeHero.astro";
+import CaseRoll from "../components/CaseRoll.astro";
+import References from "../components/References.astro";
+import Newsletter from "../components/Newsletter.astro";
+import BlogRollCategory from "../components/BlogRollCategory.astro";
+import PackshotPoints from "../components/Packshot_points.astro";
+import PackshotSlider from "../components/Packshot_slider.astro";
+import IconBlock from "../components/IconBlock.astro"
+
+const hero = {
+  bg: "#750843",
+  image: "/assets/images/hero-image.png",
+  title: "O firmie",
+  subtitle: "napisz od nas i zamów darmową konsulację",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  video: {
+    link: "https://c.stocksy.com/a/XhRK00/y0/4873047.mp4",
+  },
+};
+---
+
+<Layout title="Mr Nodu" isHome={true} textdark={true} >
+  <main>
+    <HomeHero bg={hero.bg} image={hero.image} />
+    <IconBlock/>
+   <PackshotSlider />
+    <References />
+    <PackshotPoints />
+    <BlogRoll />
+    <Instagram/>
+    <Newsletter />
+  </main>
+</Layout>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" /> 
+<link rel="stylesheet" href="/assets/css/hoverReveal.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+<script is:inline src="/assets/js/script.js"></script>

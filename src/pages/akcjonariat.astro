@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import WhyUs from "../components/WhyUs.astro";
+import Persons from "../components/Persons.astro";
+
+const hero = {
+  bg: "#750843",
+  title: "Akcjonariat",
+  subtitle: "Wise finance",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  button_link: "/akcjonariat",
+  image: "/assets/images/akcjonariat.jpeg",
+};
+const tableData = [
+  [
+    "Nazwa podmioty",
+    "Liczba posiadanych akcji na okaziciela",
+    "Udział w kapitale akcyjnym (%)",
+    "Liczba głosów na WZ",
+    "Udział głosów na WZ (%)",
+  ],
+  ["Imię i nazwisko", "12875,00000", "32,87 %", "12875,00000", "32,87 %"],
+  ["Imię i nazwisko", "12875,00000", "32,87 %", "12875,00000", "32,87 %"],
+  ["Imię i nazwisko", "12875,00000", "32,87 %", "12875,00000", "32,87 %"],
+  ["Imię i nazwisko", "12875,00000", "32,87 %", "12875,00000", "32,87 %"],
+  ["Imię i nazwisko", "12875,00000", "32,87 %", "12875,00000", "32,87 %"],
+  ["Imię i nazwisko", "12875,00000", "32,87 %", "12875,00000", "32,87 %"],
+];
+---
+
+<Layout title="Wise energy">
+  <main>
+    <HeroHeader
+      bg={hero.bg}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+      button_link={hero.button_link}
+      image={hero.image}
+      img_opacity={0.5}
+      img_has_cover={"hero-img-cover-bordo"}
+    />
+    <section class="pt-20 bg-neutral-200">
+      <div class="wrapper container lg:pb-20">
+        <h2 class="mb-20 text-bordo-200 victorserif">Akcjonariat</h2>
+        <div id="pie-chart"></div>
+      </div>
+    </section>
+    <section class="bg-neutral-200 py-20">
+      <div class="container wrapper overflow-x-auto">
+        <table
+          class="text-bordo-300 font-['Work_Sans'] custom-table min-w-[1200px] table-fixed"
+        >
+          <thead class="">
+            {
+              tableData.map((item, index) => {
+                if (index === 0) {
+                  return (
+                    <tr>
+                      {item.map((th) => (
+                        <th class="text-[22px] font-light text-left py-4 px-5 bg-bordo-100/20">
+                          {th}
+                        </th>
+                      ))}
+                    </tr>
+                  );
+                }
+              })
+            }
+          </thead>
+          <tbody class="text-base font-light">
+            {
+              tableData.map((item, index) => {
+                if (index > 0) {
+                  return (
+                    <tr>
+                      {item.map((td) => (
+                        <td>{td}</td>
+                      ))}
+                    </tr>
+                  );
+                }
+              })
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/table.css" />
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script is:inline src="/assets/js/script.js"></script>

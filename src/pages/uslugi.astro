@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import AppointmentForm from "../components/AppointmentForm.astro";
+import Offer from "../components/Offer.astro";
+import Instagram from "../components/Instagram.astro";
+import Film from "../components/Film.astro";
+import BlogRoll from "../components/BlogRoll.astro";
+import HomeHero from "../components/HomeHero.astro";
+import CaseRoll from "../components/CaseRoll.astro";
+import References from "../components/References.astro";
+import Newsletter from "../components/Newsletter.astro";
+import BrandCard from "../components/BrandCard.astro";
+
+const hero = {
+  bg: "#750843",
+  title: "Usługi",
+  subtitle: "Dla małych i średnich firm",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  button_link: "/casestudy",
+};
+---
+
+<Layout title="Wise energy" isHome={false}>
+  <main>
+    <HeroHeader
+      bg={hero.bg}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+    />
+    <section class="py-20">
+      <div class="contaienr wrapper">
+        <h2 class="text-bordo-200 mb-8">
+          <span class="victorserif mr-1">Poznaj</span><span class=" "
+            >Wise marki</span
+          >
+        </h2>
+        <div class="swiper brand-swiper">
+          <div class="swiper-wrapper">
+            {
+              [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item, index) => (
+                <div class="swiper-slide">
+                  <BrandCard brand={item} index={index} />
+                </div>
+              ))
+            }
+          </div>
+          <div class="slider-navigation">
+            <button class="swiper-button-prev nav-prev"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.5333 0.666687L7.76668 15.5014C7.69619 15.5639 7.63975 15.6407 7.60111 15.7266C7.56246 15.8126 7.54248 15.9058 7.54248 16C7.54248 16.0943 7.56246 16.1874 7.60111 16.2734C7.63975 16.3594 7.69619 16.4361 7.76668 16.4987L24.5333 31.3334"
+                  stroke="#60113D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-next nav-next">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_266_1261)">
+                  <path
+                    d="M7.46665 31.3333L24.2333 16.4986C24.3038 16.4361 24.3602 16.3593 24.3989 16.2734C24.4375 16.1874 24.4575 16.0942 24.4575 16C24.4575 15.9057 24.4375 15.8126 24.3989 15.7266C24.3602 15.6406 24.3038 15.5639 24.2333 15.5013L7.46665 0.666647"
+                    stroke="#60113D"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_266_1261">
+                    <rect
+                      width="32"
+                      height="32"
+                      fill="white"
+                      transform="translate(32 32) rotate(180)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 overflow-hidden bg-grey-500">
+      <div class="container wrapper">
+        <div class="lg:flex relative">
+          <div class="lg:pr-20 relative mb-16 lg:mb-0">
+            <h2
+              class="text-bordo-200 relative mt-16 mb-4 bg-grey-500 z-20 max-w-max pr-7"
+            >
+              <span class=" ">Wise</span>
+              <span class="victorserif">finance</span>
+            </h2>
+            <div
+              class="lg:absolute line-after top-[24px] lg:top-[96px] z-10 w-[200%] lg:w-[100%]"
+            >
+            </div>
+            <h4
+              class="  text-bordo-200 px-4 py-2 bg-grey-400 rounded-lg max-w-max mb-8"
+            >
+              Podtytuł lorem ipsum dolor sit amet
+            </h4>
+            <div class="inView slideUp">
+              <p class="mb-4 text-bordo-200 font-light">Platforma dla firm</p>
+              <p class="text-grey-200 mb-8 font-light small">
+                Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
+                condimentum lobortis.
+              </p>
+              <a class="btn primary full">Dowiedz się więcej</a>
+            </div>
+          </div>
+          <img
+            src="/assets/images/partner-person-1.png"
+            alt="Person"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg inView slideUp"
+          />
+        </div>
+      </div>
+    </section>
+    <Newsletter />
+  </main>
+</Layout>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/slider.css" />
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+></script>
+<script
+  is:inline
+  src="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js
+"
+></script>
+
+<link
+  href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css
+"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/assets/css/datepicker.css" />
+<script is:inline src="/assets/js/script.js"></script>

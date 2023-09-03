@@ -1,0 +1,162 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import Persons from "../components/Persons.astro";
+import Partners from "../components/Partners.astro";
+import HeroWithImage from "../components/HeroWithImage.astro";
+import BlockImgText from "../components/BlockImgText.astro";
+import VideoSlider from "../components/VideoSlider.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const hero = {
+  imageContent: "/assets/images/hero-img-3.png",
+  video: false,
+  title: "Tytuł aktualności",
+  subtitle: "1.12.2023",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis vulputate libertus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis vulputate libertus.",
+};
+---
+
+<Layout title="Wise energy" textdark={true}>
+  <main>
+    <HeroWithImage
+      imageContent={hero.imageContent}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+    />
+    <section class="py-20 bg-grey-400">
+        <div class="wrapper container">
+          <div class="flex flex-wrap lg:flex-nowrap">
+            <div class="lg:max-w-[484px] lg:w-full mb-10 lg:mb-0">
+              <img src="/assets/images/imgBlock-1.png" />
+              <div class="p-12 bg-grey-600 rounded-lg mt-10 ">
+                <p class="text-lg leading-8 text-bordo-100 victorserif font-normal ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis vulputate
+                  libero.
+                </p>
+              </div>
+            </div>
+      
+            <div class="text-bordo-200 lg:w-full lg:pl-[70px]">
+              <h4 class="  mb-8">
+                Vorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+                fringilla accumsan, risus sem.
+              </h4>
+              <p class="small mb-8">
+                Torem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+                fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
+                elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
+                lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+                egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
+                Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
+                lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
+                elementum tellus
+              </p>
+              <div class="p-12 bg-bordo-20 rounded-lg mb-8">
+                <h4 class="victorserif font-normal">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis vulputate
+                  libero.
+                </h4>
+              </div>
+              <p class="small">
+                Torem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+                turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+                fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
+                elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
+                lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+                egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
+                Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
+                lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
+                elementum tellus
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="py-20 bg-grey-400">
+      <div class="container wrapper">
+        <div class="swiper video-swiper">
+          <div class="swiper-wrapper">
+            {
+              [1, 2, 3, 4, 5].map((item) => {
+                return (
+                  <div class="swiper-slide">
+                    <VideoSlider />
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+        <div class="slider-navigation">
+          <button class="swiper-button-prev nav-prev"
+            ><svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24.5333 0.666687L7.76668 15.5014C7.69619 15.5639 7.63975 15.6407 7.60111 15.7266C7.56246 15.8126 7.54248 15.9058 7.54248 16C7.54248 16.0943 7.56246 16.1874 7.60111 16.2734C7.63975 16.3594 7.69619 16.4361 7.76668 16.4987L24.5333 31.3334"
+                stroke="#60113D"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-next nav-next">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_266_1261)">
+                <path
+                  d="M7.46665 31.3333L24.2333 16.4986C24.3038 16.4361 24.3602 16.3593 24.3989 16.2734C24.4375 16.1874 24.4575 16.0942 24.4575 16C24.4575 15.9057 24.4375 15.8126 24.3989 15.7266C24.3602 15.6406 24.3038 15.5639 24.2333 15.5013L7.46665 0.666647"
+                  stroke="#60113D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_266_1261">
+                  <rect
+                    width="32"
+                    height="32"
+                    fill="white"
+                    transform="translate(32 32) rotate(180)"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <Newsletter />
+  </main>
+</Layout>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script is:inline src="/assets/js/script.js"></script>

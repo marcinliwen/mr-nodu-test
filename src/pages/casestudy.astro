@@ -1,0 +1,243 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import AppointmentForm from "../components/AppointmentForm.astro";
+import Offer from "../components/Offer.astro";
+import Instagram from "../components/Instagram.astro";
+import Film from "../components/Film.astro";
+import BlogRoll from "../components/BlogRoll.astro";
+import HomeHero from "../components/HomeHero.astro";
+import CaseRoll from "../components/CaseRoll.astro";
+import References from "../components/References.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const hero = {
+  bg: "#750843",
+  title: "Case study",
+  subtitle: "Uber & Eco Car",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+  button_link: "/casestudy",
+};
+---
+
+<Layout title="Wise energy" isHome={false}>
+  <main>
+    <HeroHeader
+      bg={hero.bg}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+    />
+    <section class="py-20 relative">
+      <div class="container wrapper">
+        <div class="flex items-center relative">
+          <div class="text-bordo-200 w-full lg:w-[60%] flex flex-col lg:pr-16">
+            <div
+              class="bg-beige/10 py-[10px] pr-4 lg:pr-12 pl-4 rounded-lg lg:max-w-max flex items-center mb-8 inView slideUp"
+            >
+              <span class="victorserif text-[35px] leading-[45px] mr-10"
+                >01</span
+              ><span class="lagunsans text-[20px] leading-7"
+                >Cass aptent nostra lorem</span
+              >
+            </div>
+            <h4 class="victorserif mb-8 inView slideUp">
+              Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </h4>
+            <p class="mb-20 text-grey-200 inView slideUp">
+              Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Worem ipsum dolor sit amet, consectetur
+              adipiscing elit. Nunc vulputate libero et velit interdum, ac
+              aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <p
+              class="  text-bordo-100 text-[20px] mt-auto mb-8 font-medium"
+            >
+              Cass aptent nostra lorem
+            </p>
+            <div
+              class="hidden lg:block lg:absolute right-[20%] h-[1px] left-0 bottom-[20px] lg:bottom-[4px] bg-bordo-100"
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="lg:absolute lg:left-[60%] top-20 bottom-20 right-0 w-full lg:w-[40%] inView slideUp"
+      >
+        <img
+          src="/assets/images/casestudy-1.png"
+          alt="Auto"
+          class="w-full h-full object-cover rounded-l-lg"
+        />
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container wrapper">
+        <div class="lg:flex lg:gap-20 items-center inView slideUp">
+          <img
+            src="/assets/images/casestudy-2.png"
+            alt="auto"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg"
+          />
+          <div class="text-bordo-200">
+            <h3 class="mb-12  ">Zakres</h3>
+            <p class="mb-8">
+              Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+            </p>
+            <ol class="mb-10">
+              <li class="small pb-7">
+                Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <>
+                <li class="small pb-7">
+                  Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li class="small pb-7">
+                  Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+              </>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-bordo-100/20">
+      <div
+        class="container wrapper gap-8 lg:gap-0 flex flex-col lg:flex-row lg:items-center justify-between"
+      >
+        <div>
+          <h2 class="victorserif text-bordo-200 inView slideUp">Liczby</h2>
+        </div>
+        <div
+          class="w-full lg:w-[1px] bg-bordo-100 h-[1px] lg:h-auto lg:self-stretch"
+        >
+        </div>
+        <div class="grid lg:flex gap-8 inView">
+          <div class="max-w-[264px] text-black inView slideUp">
+            <span
+              class="text-[48px] leading-[68px]   counterUp"
+              data-target="10">0</span
+            >
+            <p class="victorserif text-[24px] leading-[38px]">
+              faktur procesowanych miesięcznie
+            </p>
+          </div>
+          <div class="max-w-[264px] inView slideUp">
+            <span
+              class="text-[48px] leading-[68px]   counterUp"
+              data-target="75">0</span
+            >
+            <p class="victorserif text-[24px] leading-[38px]">
+              faktur rejestrowanych w ciągu 24 godzin
+            </p>
+          </div>
+          <div class="max-w-[264px] inView slideUp">
+            <span
+              class="text-[48px] leading-[68px]   counterUp"
+              data-target="500">0</span
+            >
+            <p class="victorserif text-[24px] leading-[38px]">
+              pół tysiąca zadowolonych użytkowników
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-grey-500">
+      <div class="container wrapper inView slideUp">
+        <div class="lg:flex lg:gap-20 items-center">
+          <div class="text-bordo-200">
+            <h3 class="mb-12  ">Korzyści</h3>
+            <p class="mb-8">
+              Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+            </p>
+            <ol class="mb-10">
+              <li class="small pb-7">
+                Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <>
+                <li class="small pb-7">
+                  Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li class="small pb-7">
+                  Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+              </>
+            </ol>
+          </div>
+          <img
+            src="/assets/images/casestudy-3.png"
+            alt="Farma słoneczna"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="py-28">
+      <div class="container wrapper text-center text-bordo-100">
+        <h4 class="victorserif mb-8">
+          Opisane Case Study dotyczy wdrożenia wykonanego w:
+        </h4>
+        <h4 class="victorserif mb-8">14/12.2022</h4>
+        <div
+          class="flex flex-wrap lg:flex-nowrap gap-4 lg:gap-0 justify-center"
+        >
+          <div class="lg:w-1/2 lg:pr-2">
+            <a
+              class="btn primary outlined ml-auto !bg-transparent hover:!bg-bordo-100 min-w-[240px]"
+              >Pokaż poprzednią</a
+            >
+          </div>
+          <div class="lg:w-1/2 lg:pl-2">
+            <a class="btn primary full min-w-[240px]">Pokaż następną</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <References />
+    <Newsletter />
+  </main>
+</Layout>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
+<script
+  is:inline
+  src="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js
+"
+></script>
+
+<link
+  href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css
+"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/assets/css/datepicker.css" />
+<script is:inline src="/assets/js/script.js"></script>

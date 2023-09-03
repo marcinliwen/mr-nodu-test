@@ -1,0 +1,28 @@
+---
+const { brand, index } = Astro.props;
+const counter = index + 1;
+---
+
+<div class="bg-grey-400 rounded-2xl px-6 py-12 text-center">
+  <div
+    class="bg-bordo-100 rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-4"
+  >
+    <span class="victorserif text-white text-[22px] leading-[200%] font-normal"
+      >{counter < 10 ? "0" + counter : counter}</span
+    >
+  </div>
+  <div
+    class="px-8 py-[10px] bg-beige/50 rounded-lg max-w-max mx-auto text-bordo-100 mb-4"
+  >
+    <span class="  mr-2">Wise</span><span class="victorserif"
+      >faktoring</span
+    >
+  </div>
+
+  <h3 class="victorserif mb-4 text-bordo-100">Faktoring SME</h3>
+  <p class="small mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+    libero et velit interdum, ac aliquet odio mattis vulputate libertus.
+  </p>
+  <a class="link text-bordo-100" href="/usluga">Więcej</a>
+</div>

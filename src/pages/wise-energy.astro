@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Input from "../components/Input.astro";
+import Select from "../components/Select.astro";
+import ContactForm from "../components/ContactForm.astro";
+import TextArea from "../components/TextArea.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import Persons from "../components/Persons.astro";
+import Partners from "../components/Partners.astro";
+import Instagram from "../components/Instagram.astro";
+
+const hero = {
+  image: "/assets/images/hero-1.png",
+  video: true,
+  title: "Nasze kompetencje",
+  subtitle: "Kompleksowe działania dla Ciebie",
+  text: "Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia",
+};
+---
+
+<Layout title="Wise energy" textdark={false}>
+  <main>
+    <HeroHeader
+      image={hero.image}
+      video={hero.video}
+      title={hero.title}
+      subtitle={hero.subtitle}
+      text={hero.text}
+    />
+    <section class="py-20 bg-white overflow-hidden">
+      <div class="container wrapper">
+        <h2 class="text-bordo-200 victorserif inView slideUp">Co oferujemy</h2>
+        <h3 class="pb-20 text-bordo-200   inView slideUp">
+          Zobacz, <span class="victorserif">gdzie pomagamy.</span>
+        </h3>
+        <div class="lg:flex relative mb-32">
+          <div class="lg:pr-20 relative mb-8 lg:mb-0">
+            <span
+              class="text-bordo-300 relative lg:absolute lg:top-[-23px] left-0 flex items-center max-w-max gap-6 bg-white pr-4 lg:pr-12 z-20 mb-16 lg:mb-0"
+            >
+              <h4 class="victorserif">01</h4>
+              <h2 class=" ">Sprzedaż</h2></span
+            >
+            <div
+              class="lg:absolute line-after top-[20px] lg:top-[4px] z-10 w-[500%] lg:w-[100%]"
+            >
+            </div>
+            <div class="inView slideUp">
+              <h4 class="victorserif text-bordo-300 italic mb-6 lg:mt-40">
+                Rozwiązania dla odbiorców indywidualnych
+              </h4>
+              <p class="text-grey-200 mb-8">
+                Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
+                condimentum lobortis.
+              </p>
+              <div class="flex flex-col gap-4 max-w-[245px]">
+                <a class="btn primary full w-full text-center"
+                  >Poproś o kontakt</a
+                >
+                <a href="usluga" class="btn primary outlined w-full text-center"
+                  >Dowiedz się więcej</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            src="/assets/images/partner-person-1.png"
+            alt="Person"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg"
+          />
+        </div>
+        <div class="lg:flex lg:flex-row-reverse relative">
+          <div class="lg:pl-20 relative mb-8 lg:mb-0">
+            <span
+              class="text-bordo-300 relative lg:absolute lg:top-[-23px] left-0 lg:left-20 flex items-center max-w-max gap-6 bg-white pr-4 lg:pr-12 z-20 mb-16 lg:mb-0"
+            >
+              <h4 class="victorserif">02</h4>
+              <h2 class=" ">Instalacja</h2></span
+            >
+            <div
+              class="lg:absolute line-after top-[20px] lg:top-[4px] z-10 w-[500%]"
+            >
+            </div>
+            <div class="inView slideUp">
+              <h4 class="victorserif text-bordo-300 italic mb-6 lg:mt-40">
+                Całościowe rozwiązania dla biznesu
+              </h4>
+              <p class="text-grey-200 mb-8">
+                Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
+                condimentum lobortis.
+              </p>
+              <div class="flex flex-col gap-4 max-w-[245px]">
+                <a class="btn primary full w-full text-center"
+                  >Poproś o kontakt</a
+                >
+                <a
+                  href="/usluga"
+                  class="btn primary outlined w-full text-center"
+                  >Dowiedz się więcej</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            src="/assets/images/partner-person-2.png"
+            alt="Person"
+            width="478px"
+            class="mb-8 lg:mb-0 rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+    <Instagram />
+  </main>
+</Layout>
+
+<script is:inline src="/assets/js/script.js"></script>

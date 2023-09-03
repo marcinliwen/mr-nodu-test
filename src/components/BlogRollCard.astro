@@ -1,0 +1,22 @@
+---
+const {bg_class}=Astro.props
+---
+
+<article class={`${bg_class} p-4 min-h-[532px] flex flex-col rounded-2xl`}>
+  <img
+    class="mb-5 rounded-lg"
+    alt="Argument lorem ipsum"
+    src="/assets/images/blog-roll.png"
+  />
+  <div class="p-[10px]">
+    <p class="text-main-200 text-2xl lora">Tutaj damy tytuł aktualności</p>
+    <p class="text-base text-main-900 mb-5">12.12.2023</p>
+    <p class=" text-main-900 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis vulputate libertus.
+    </p>
+    <a href="/wpis" class="btn-text font-semibold link max-w-max text-main-100  cursor-pointer mb-5 mt-4">
+      Poznaj produkt</a
+    >
+  </div>
+  
+</article>

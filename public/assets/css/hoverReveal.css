@@ -1,0 +1,47 @@
+.hover-reveal {
+    position: absolute;
+    z-index: -1;
+    width: 288px;
+    height: 188px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    will-change: transform, filter;
+    
+
+}
+.reveal-container{
+    display: inline;
+    z-index: 1;
+    position: relative;
+}
+.reveal-container:hover{
+    color: #fff;
+}
+.reveal-container:hover span{
+   color: #fff;
+   z-index: 10;
+   position: relative;
+}
+.reveal-container img{
+    position: absolute;
+    min-width: 288px;
+    width: 288px;
+    height: 188px;
+    border-radius: 8px;
+    object-fit: cover;
+transform: translate(-50%, -50%) ;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    
+    transition-property: opacity;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+.reveal-container:hover img{
+    opacity: 1;
+}
