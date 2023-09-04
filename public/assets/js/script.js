@@ -590,6 +590,41 @@ const tabNav = document.querySelectorAll(".tab-nav");
         },
       },
     });
+    const timelineSwiper = new Swiper(".timeLine-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 64,
+      pagination: {
+        enabled: true,
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+      navigation: {
+        nextEl: ".nav-next",
+        prevEl: ".nav-prev",
+      },
+      on: {
+        init: function (swiper) {
+          //fractionCounter(swiper);
+        },
+        /* slideChange: function (swiper) {
+          const counter = swiper.pagination.el.querySelector(".counter");
+          counter.innerHTML = `${Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}/${
+            Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)
+          }`;
+        }, */
+      },
+      breakpoints: {
+        760: {
+          slidesPerView: 2, 
+        },
+        1024: {
+          slidesPerView: 3, 
+        },
+      },
+    });
     let $lgSwiper = document.getElementById("lg-swipper");
     const serviceImgSwiper = new Swiper(".service-img-swiper", {
       slidesPerView: 1,
