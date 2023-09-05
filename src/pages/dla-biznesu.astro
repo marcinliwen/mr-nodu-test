@@ -14,13 +14,16 @@ import References from "../components/References.astro";
 const timeLine =[
   {year: "2022", number: "1", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."},
   {year: "2023", number: "2", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."},
-  {year: "2024", number: "3", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."}
+  {year: "2024", number: "3", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."},
+  {year: "2025", number: "4", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."},
+  {year: "2026", number: "5", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."},
+  {year: "2027", number: "6", desription: "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor."}
 ]
 ---
 
 <Layout title="Mr Nodu" isHome={true} textdark={true} >
   <main>
-    <section class="pt-52 pb-20 bg-second-200/10 ">
+    <section class="pt-52 pb-20 bg-second-200/10 relative">
         <div class="container wrapper max-w-[1274px]">
             <div class=" mb-12 md:mb-20 w-full">
                 <h1 class="text-main-200 text-left">Dla biznesu</h1>
@@ -32,12 +35,13 @@ const timeLine =[
                     return (
                       <div class="swiper-slide">
                         <div class="text-center">
-                          <div class="flex ites-center justify-center bg-main-100 mb-8">
-                          <span class="text-[30px] font-semibold leading-[120%] w-8 h-8  ">{item.number}</span>
-                        </div>
-
-                          <h3>{item.year}</h3>
-                          <p>{item.desription}</p>
+                          <div class="flex items-center justify-center bg-main-100 mb-8 w-[100px] h-[100px] rounded-full mx-auto">
+                            <span class="text-[30px] font-semibold leading-[120%] lora text-gold-100 ">{item.number}</span>
+                          </div>
+                          
+                          <h3 class="lora font-normal text-main-200 mb-[71px]">{item.year}</h3>
+                          <span class="w-[27px] h-[27px] bg-main-100 block rounded-full mx-auto mb-[65px] border-[6px] border-[#fef9f3]"></span>
+                          <p class="text-main-200 leading-[180%]">{item.desription}</p>
                         </div>
                       </div>
                     );
@@ -90,6 +94,7 @@ const timeLine =[
               </div>
             </div>
         </div>
+        <span class="absolute left-0 right-0 h-[1px] bg-main-100 bottom-[340px]"></span>
     </section>
     <section>
       <div class="flex flex-wrap">
@@ -114,7 +119,7 @@ const timeLine =[
                   <h3 class="mb-8">10 nasz nieustanny cel</h3>
                   <h3 class="lora mb-8">Wierzymy, że przez nieustanne poszukiwania innowacyjnych rozwiązań w dziedzinach w których wydawałoby się, że wszystko jest już zrobione, możemy zaoferować pacjentom wyjątkowe produkty wyróżniające się jakością oraz skutecznością działania.</h3>
                   <h5 class="mb-2">Łukasz Strachowski</h5>
-                  <p class="text-sm">Prezes zarądu Mr Nodu</p>
+                  <p class="text-sm">Prezes zarządu Mr Nodu</p>
               </div>
               
           </div>

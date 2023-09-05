@@ -49,7 +49,7 @@ module.exports = {
           300: "#AC7E42"
         },
         gold: {
-          100:"#F4C48D"
+          100:"#F4C48D",
         }
       },
     },
