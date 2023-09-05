@@ -1,0 +1,67 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Newsletter from "../components/Newsletter.astro";
+import VideoSlider from "../components/VideoSlider.astro";
+import VideoRoll from "../components/VideoRoll.astro";
+ import About from "../components/About.astro";
+ import BrandRoll from "../components/BrandRoll.astro"
+import Instagram from "../components/Instagram.astro";
+import BlogRoll from "../components/BlogRoll.astro";
+import PackshotSlider from "../components/Packshot_slider.astro";
+import References from "../components/References.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+import IconBlock from "../components/IconBlock.astro";
+
+const hero ={
+    title: "Mr Nodu",
+    subtitle: "co wyróżnia naszą posypkę panko?",
+    text: "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    button_link: "/produkt",
+    image: "/assets/images/produkty-hero.png",
+    textdark: true
+
+}
+---
+
+<Layout title="Mr Nodu" isHome={false} textdark={true} >
+  <main>
+    <section class="bg-second-400 pt-52 pb-28 relative">
+        <div class="container wrapper  max-w-[1274px]">
+          <div class="flex flex-wrap lg:flex-nowrap gap-4 md:justify-center lg:justify-normal">
+            <div class="max-w-[565px] text-main-200 inView slideUp">
+              <h1 class="mb-4">Panko</h2>
+              <h4 class="mb-4 ">bułka tarta do panierowania</h4>
+              <h2 class="mb-8">Bułka tarta w stylu japońskim</h2>
+              <p class="mb-8">jest bagatym źródlem składników odżywczych pomagających zachować zdrowe życie (biotyna i cynk), skórę (jod i niacyna) i paznokcie (cynk).</p>
+              
+                <a class="btn primary full mb-4 mx-auto lg:ml-0">Kup teraz</a>
+                <a class="btn primary px-6 mx-auto lg:ml-0">Poznaj pozostałe produkty</a>
+              
+             
+            </div>
+            <div class="max-w-[561px] lg:w-full lg:ml-auto lg:mr-[-83px] inView slideUp">
+              <img src="/assets/images/produkt-panko.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+   <IconBlock />
+    <VideoRoll />
+    <References />
+    <BlogRoll />
+    <Instagram />
+  </main>
+</Layout>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" /> 
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+></script>
+<script is:inline src="/assets/js/script.js"></script>

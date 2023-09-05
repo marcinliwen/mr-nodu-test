@@ -1,0 +1,53 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Newsletter from "../components/Newsletter.astro";
+import VideoSlider from "../components/VideoSlider.astro";
+import VideoRoll from "../components/VideoRoll.astro";
+ import About from "../components/About.astro";
+ import BrandRoll from "../components/BrandRoll.astro"
+import Instagram from "../components/Instagram.astro";
+import BlogRoll from "../components/BlogRoll.astro";
+import PackshotSlider from "../components/Packshot_slider.astro";
+import References from "../components/References.astro";
+import HeroHeader from "../components/HeroHeader.astro";
+
+const hero ={
+    title: "Mr Nodu",
+    subtitle: "co wyróżnia naszą posypkę panko?",
+    text: "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    button_link: "/produkt",
+    image: "/assets/images/produkty-hero.png",
+    textdark: true
+
+}
+---
+
+<Layout title="Mr Nodu" isHome={false} textdark={true} >
+  <main>
+    <HeroHeader 
+    title={hero.title}
+    subtitle={hero.subtitle}
+    text={hero.text}
+    button_link={hero.button_link}
+    image={hero.image}
+    textdark={hero.textdark}
+    />
+   
+    <BlogRoll />
+    <References bg_class="bg-gold-200/10"/>
+    <Instagram />
+    <Newsletter />
+  </main>
+</Layout>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<link rel="stylesheet" href="/assets/css/slider.css" /> 
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+></script>
+<script is:inline src="/assets/js/script.js"></script>

@@ -1,10 +1,14 @@
 ---
+const {showTitle}=Astro.props;
 ---
-<section class="bg-second-200/10 pt-28 pb-32">
+<section class={`${showTitle ? "pt-28 pb-32" : "py-24"}`}>
     <div class="container wrapper max-w-[1274px] text-center text-main-200">
-        <h1 class="mb-4">Mr Nodu</h1>
-        <h3>co wyróżnia naszą posypkę panko?</h3>
-        <div class="my-12 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 lg:gap-24">
+      {showTitle && 
+        <h1 class="mb-4 inView slideUp">Mr Nodu</h1>
+        <h3 class="inView slideUp">co wyróżnia naszą posypkę panko?</h3>
+      }
+        
+        <div class="my-12 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 lg:gap-24 inView slideUp">
             <div class="text-center">
                 <h3 class="uppercase font-medium mb-6">przebadany</h3>
                 <p class="text-sm leading-[22px] mb-6">Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis dolor.</p>
@@ -58,6 +62,7 @@
                   </svg>
             </div>
         </div>
-        <a class="btn primary full mx-auto">Zobacz więcej</a>
+        {showTitle &&  <a class="btn primary full mx-auto inView slideUp">Zobacz więcej</a> }
+       
     </div>
 </section>

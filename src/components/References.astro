@@ -38,9 +38,11 @@ const references = [
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Borem ipsum dolor sit amet, consectetur.`,
   },
 ];
+
+const {bg_class} = Astro.props
 ---
 
-<section class="pt-24 pb-14">
+<section class={`pt-24 pb-14 ${bg_class ? bg_class : ''}`}>
   <div class="container wrapper">
     <h2 class="text-main-200 lora atext-[30px] leading-[36px] mb-4 font-semibold text-center">Opinie naszych klientów</h2>
     <p class="text-main-200 text-2xl text-center mb-12">przeczytaj, co mówią inni</p>

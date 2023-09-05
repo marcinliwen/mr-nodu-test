@@ -16,34 +16,33 @@ const {
 
 <section
   style={`${bg && "background:" + bg}  `}
-  class={`bg-bordo-100 pt-52 pb-28 relative ${
+  class={`bg-main-200 pt-52 pb-28 relative ${
     img_has_cover ? img_has_cover : ""
   }`}
 >
   <div
-    class={`container wrapper ${
-      textdark ? "text-bordo-100" : "text-white"
-    } lg:flex relative z-20 inView slideUp`}
+    class={`container wrapper max-w-[1274px] ${
+      textdark ? "text-main-200" : "text-white"
+    } lg:flex relative z-20 `}
   >
-    <div class="max-w-[482px] flex-1 mb-8 lg:mb-0">
-      <h1 class="mb-4  ">{title}</h1>
-      <h2 class="victorserif mb-8">{subtitle}</h2>
+    <div class="max-w-[565px] flex-1 mb-8 lg:mb-0">
+      <h1 class="mb-4">{title}</h1>
+      <h3 class="mb-8">{subtitle}</h3>
+      <p class={`${textdark && "text-main-200"} mb-8` }>
+        {text}
+      </p>
       {
         button_link && (
           <a
-            class={`btn ${textdark ? "primary" : "secondary"}`}
+            class={`btn ${textdark ? "primary full" : "secondary"}`}
             href={button_link}
           >
-            Czytaj więcej
+            Poznaj produkt
           </a>
         )
       }
     </div>
-    <div class="max-w-[648px] lg:ml-12">
-      <p class={`small ${textdark && "text-bordo-300"}`}>
-        {text}
-      </p>
-    </div>
+    
   </div>
   {
     image && !video && (
