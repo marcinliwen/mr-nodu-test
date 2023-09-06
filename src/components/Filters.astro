@@ -1,0 +1,98 @@
+---
+const category = [
+  "Zdrowie",
+  "Przepisy",
+  "Atesty",
+  "Sprzedaż",
+  "Sieć dystrybucji",
+];
+---
+
+<section class="pt-28 lg:pt-52 pb-40 bg-main-100">
+  <div class="container wrapper flex flex-wrap">
+    <div class="text-white my-auto lg:pl-[83px] mb-12 lg:mb-0">
+        <h1 class="mb-4">Baza wiedzy</h1>
+        <h3>co wyróżnia naszą posypkę panko?</h3>
+    </div>
+  
+      <form id="filters" class="max-w-[728px] ml-auto  w-full">
+        <div class="md:flex items-center">
+          <div class="md:ml-auto relative w-full ">
+            <input
+              type="text"
+              name="search"
+              class="search p_xs leading-4 py-[19px] px-8 bg-transparent border-b border-white text-white w-full max-w-full block placeholder:text-white placeholder:tracking-wider"
+              placeholder="Wpisz, czego szukasz"
+            />
+            <button
+              type="button"
+              class="absolute top-[2px] right-[2px] p-4 hover-scale"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_84_5449)">
+                  <path d="M0.5 10.499C0.5 13.1512 1.55357 15.6947 3.42893 17.5701C5.3043 19.4454 7.84784 20.499 10.5 20.499C13.1522 20.499 15.6957 19.4454 17.5711 17.5701C19.4464 15.6947 20.5 13.1512 20.5 10.499C20.5 7.84683 19.4464 5.30329 17.5711 3.42793C15.6957 1.55256 13.1522 0.498993 10.5 0.498993C7.84784 0.498993 5.3043 1.55256 3.42893 3.42793C1.55357 5.30329 0.5 7.84683 0.5 10.499Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.5003 23.499L17.5713 17.57" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_84_5449">
+                    <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="filters-action"
+          class="flex justify-between mt-16 mb-6  active"
+        >
+          <button
+            id="filters-open"
+            class="flex items-center hover-color"
+            type="button"
+          >
+            <span class="caption text-xl leading-[180%] mr-2 md:mr-8 text-gold-100 ">Kategorie</span>
+            <span
+              ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_84_5780)">
+                  <path d="M0.52832 5.62843L11.6543 18.2034C11.7012 18.2563 11.7588 18.2986 11.8233 18.3276C11.8878 18.3566 11.9576 18.3716 12.0283 18.3716C12.099 18.3716 12.1689 18.3566 12.2334 18.3276C12.2978 18.2986 12.3554 18.2563 12.4023 18.2034L23.5283 5.62843" stroke="#F4C48D" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_84_5780">
+                    <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+          </button>
+          <button
+            id="clear-filters"
+            class="flex hover:bg-primary-200 transition duration-300 ease-morph py-1 px-2 active:bg-transparent"
+            type="button"
+          >
+            <span class="text-gold-100 font-semibold link">Wyczyść filtry</span>
+          </button>
+        </div>
+        <div class="flex flex-wrap gap-4 filter-box open">
+          {
+            category.map((item) => (
+              <label class="w-full md:w-auto h-12 py-3 px-4 rounded-lg  focus:bg-white border border-gold-100 focus:outline-none flex gap-2 items-center justify-center relative cursor-pointer">
+                <input
+                  type="checkbox"
+                  name={item}
+                  class="opacity-0 peer absolute"
+                  checked
+                />
+                <span class="absolute inset-[-1px] peer-checked:bg-gold-100 rounded-lg" />
+                <span class="relative z-20 font-sora p_xs text-gold-100 peer-checked:text-main-100">
+                  {item}
+                </span>
+                
+              </label>
+            ))
+          }
+        </div>
+      </form>
+   
+  </div>
+</section>

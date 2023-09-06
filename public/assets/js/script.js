@@ -1,4 +1,42 @@
 window.onload = () => {
+  /**
+   * Filters
+   */
+  const filtersOpenBtn = document.getElementById("filters-open");
+  const filtersAction = document.getElementById("filters-action");
+  const filterBox = document.querySelector(".filter-box");
+  const clearFilters = document.getElementById("clear-filters");
+
+  if (filtersOpenBtn) {
+    const filterBoxHeight = filterBox.offsetHeight;
+    filterBox.style.height = filterBoxHeight + "px";
+    filtersOpenBtn.addEventListener("click", () => {
+      if (filterBox.classList.contains("open")) {
+        filterBox.style.height = "0px";
+        filterBox.classList.remove("open");
+        filtersAction.classList.remove("active");
+      } else {
+        filterBox.classList.add("open");
+        filtersAction.classList.add("active");
+
+        filterBox.style.height = filterBoxHeight + "px";
+      }
+    });
+  }
+  if (clearFilters) {
+    clearFilters.addEventListener("click", () => {
+      let input = document.getElementById("child-age");
+      if (input) {
+        input.value = 0;
+      }
+      var filters = document.querySelectorAll(
+        '#filters input[type="checkbox"]'
+      );
+      filters.forEach((item) => {
+        return (item.checked = false);
+      });
+    });
+  }
 /**
  * simple tabs
  */

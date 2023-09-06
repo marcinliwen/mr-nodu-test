@@ -232,6 +232,10 @@
     font-weight: 400;
     line-height: 120%;
   }
+  .pagination-link.active {
+    background: #966433;
+    color: #fff;
+}
   .menu-text{
     font-family: "Wix Madefor Text";
     font-size: 14px;
