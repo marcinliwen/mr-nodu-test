@@ -20,8 +20,26 @@ const hero ={
     button_link: "/produkt",
     image: "/assets/images/produkty-hero.png",
     textdark: true
-
 }
+
+const ingrediens = [
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"},
+    {name: "Składnik", value: "1 kapsułka dziennie"}
+]
+
+const vit = [
+    {name: "Niacyna", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", symbol:"B"},
+    {name: "Niacyna", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", symbol:"B"},
+    {name: "Niacyna", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", symbol:"B"},
+    {name: "Niacyna", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", symbol:"B"},
+]
 ---
 
 <Layout title="Mr Nodu" isHome={false} textdark={true} >
@@ -49,6 +67,46 @@ const hero ={
       
    <IconBlock />
     <VideoRoll />
+    <section class="bg-second-400 pb-10">
+        <div class="container wrapper max-w-[1274px]">
+            <div class="grid md:grid-cols-2 mb-16">
+                <div class="flex flex-col  md:pr-8 lg:pr-0">
+                    <h2 class="mb-10 text-main-200">Właściwości</h2>
+                    <p class="text-main-200 mb-24">Naszym celem jest dostarczanie nowoczesnych, niestandardowych rozwiązań: receptur nowych produktów i całościowych koncepcji dla sektora farmaceutycznego i stomatologicznego. Oferowanie przez nas rozwiązania już od wielu lat wspomagają i przyspieszają proces poprawy jakości życia klientów, którzy nam zaufali. Osiągamy to, dzięki współpracy z wieloma wybitnymi naukowcami i praktykami z kraju i zagranicy. A także dzięki znakomitym specjalistom, których zatrudniamy bezpośrednio w naszej firmie. Nasze preparaty poddawane są rygorystycznym badaniom zgodnie z ustawodawstwem polskim i europejskim.</p>
+                    <h2 class="mb-10 text-main-200">Zastosowanie</h2>
+                    <p class="text-main-200 mb-8">Naszym celem jest dostarczanie nowoczesnych, niestandardowych rozwiązań: receptur nowych produktów i całościowych koncepcji dla sektora farmaceutycznego i stomatologicznego.</p>
+                </div>
+                <div class="flex flex-col ">
+                <img src="/assets/images/panko-4.png" class="ml-auto"/>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section class="bg-second-400 pb-10">
+        <div class="container wrapper max-w-[1274px]">
+            <h2 class="mb-16 text-main-200">Składniki</h2>
+            <div class="grid md:grid-cols-2 mb-16">
+                <div class="max-w-[557px] text-main-200 mb-14 md:mb-0">
+                    {ingrediens.map(item=>{return(<div class="p-4 w-full flex bg-white even:bg-white/50"><p>{item.name}</p> <p class="ml-auto">{item.value}</p></div>)
+                    })}
+                </div>
+                <div>
+                    {vit.map(item=>{
+                        return(
+                            <div class="flex gap-4 mb-8 max-w-[481px] ml-auto">
+                                <div><span class="text-[30px] lora font-semibold leading-[120%] text-gold-100 bg-main-100 w-16 h-16 rounded-full flex justify-center items-center">{item.symbol}</span></div>
+                                <div class="text-main-200">
+                                    <h5>{item.name}</h5>
+                                    <p>{item.description}</p>
+                                    </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <References />
     <BlogRoll />
     <Instagram />
