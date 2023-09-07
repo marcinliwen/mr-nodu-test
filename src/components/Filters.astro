@@ -84,15 +84,15 @@ const category = [
         <div class="flex flex-wrap gap-6 filter-box open">
           {
             category.map((item) => (
-              <label class="w-full md:w-auto h-12 py-3 px-4 rounded-lg  focus:bg-white border border-gold-100 focus:outline-none flex gap-2 items-center justify-center relative cursor-pointer">
+              <label class="w-full group md:w-auto h-12 py-3 px-4 rounded-lg  focus:bg-white border border-gold-100  focus:outline-none flex gap-2 items-center justify-center relative cursor-pointer">
                 <input
                   type="checkbox"
                   name={item}
                   class="opacity-0 peer absolute"
                   checked
                 />
-                <span class="absolute inset-[-1px] peer-checked:bg-gold-100 rounded-lg" />
-                <span class="relative z-20 font-sora p_xs text-gold-100 peer-checked:text-main-100">
+                <span class="absolute inset-[-1px] peer-checked:bg-gold-100 rounded-lg " />
+                <span class="relative z-20 font-sora p_xs text-gold-100 peer-checked:text-main-100 ">
                   {item}
                 </span>
                 
