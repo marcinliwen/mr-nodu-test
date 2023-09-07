@@ -4,104 +4,16 @@ import Select from "../components/Select.astro";
 import TextArea from "./TextArea.astro";
 ---
 
-<section class="py-24">
-  <div class="container wrapper lg:flex">
+<section class="pt-52 pb-16 bg-second-400">
+  <div class="container wrapper max-w-[1274px] md:flex items-start">
     <div
-      class="text-bordo-100 max-w-[482px] flex flex-col lg:mr-28 mb-14 lg:mb-0"
+      class="text-main-200 max-w-[648px] flex flex-col lg:mr-28 mb-14 lg:mb-0"
     >
-      <h2 class="victorserif mb-8">
-        Napisz do nas i zamów darmową konsultację
-      </h2>
-      <div class="flex items-center gap-8 mb-2">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M17.5 0.5H6.5C5.39543 0.5 4.5 1.39543 4.5 2.5V21.5C4.5 22.6046 5.39543 23.5 6.5 23.5H17.5C18.6046 23.5 19.5 22.6046 19.5 21.5V2.5C19.5 1.39543 18.6046 0.5 17.5 0.5Z"
-            stroke="#750843"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-          <path
-            d="M19.5 19.5H4.5"
-            stroke="#750843"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-          <path
-            d="M9.5 2.5H14.5"
-            stroke="#750843"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-          <path
-            d="M12 21.5C11.8619 21.5 11.75 21.3881 11.75 21.25C11.75 21.1119 11.8619 21 12 21"
-            stroke="#750843"></path>
-          <path
-            d="M12 21.5C12.1381 21.5 12.25 21.3881 12.25 21.25C12.25 21.1119 12.1381 21 12 21"
-            stroke="#750843"></path>
-        </svg>
-        <h3 class="text-bordo-100  ">kontakt@wisefinance.pl</h3>
-      </div>
-      <div class="flex items-center gap-8 mb-2">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clip-path="url(#clip0_156_3821)">
-            <path
-              d="M6.5 17.5H1.5C1.23478 17.5 0.98043 17.3946 0.792893 17.2071C0.605357 17.0196 0.5 16.7652 0.5 16.5V8.5C0.5 7.70435 0.81607 6.94129 1.37868 6.37868C1.94129 5.81607 2.70435 5.5 3.5 5.5C4.29565 5.5 5.05871 5.81607 5.62132 6.37868C6.18393 6.94129 6.5 7.70435 6.5 8.5V17.5Z"
-              stroke="#750843"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M3.5 5.5H20.5C21.2956 5.5 22.0587 5.81607 22.6213 6.37868C23.1839 6.94129 23.5 7.70435 23.5 8.5V16.5C23.5 16.7652 23.3946 17.0196 23.2071 17.2071C23.0196 17.3946 22.7652 17.5 22.5 17.5H6.5"
-              stroke="#750843"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M13.5 17.5V23.5"
-              stroke="#750843"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M2.5 15.5H4.5"
-              stroke="#750843"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M4.5 5.5V2.5"
-              stroke="#750843"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M7.5 0.5H4.5V2.5H7.5V0.5Z"
-              stroke="#750843"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </g>
-          <defs>
-            <clipPath id="clip0_156_3821">
-              <rect width="24" height="24" fill="white"></rect>
-            </clipPath>
-          </defs>
-        </svg>
-
-        <h3 class="text-bordo-100  ">+48 22 800 200 220</h3>
-      </div>
-      <ul class="flex gap-6 items-center mt-16">
-        <li><a href="/" class="small-text link">Facebook</a></li>
-        <li><a href="/" class="small-text link">Linked In</a></li>
-        <li>
-          <a href="/" class="small-text link">Twitter</a>
-        </li>
-      </ul>
-    </div>
-    <form class="w-full max-w-[464px] grid gap-8">
+      <h1 class="mb-4">
+        Napisz do nas
+      </h1>
+     <h4 class="mb-8">jesteś zainteresowany? Wypełnij formularz kontaktowy.</h4>
+     <form class="w-full grid gap-8 form-full white">
       <Input
         type="mail"
         id="mail"
@@ -110,8 +22,36 @@ import TextArea from "./TextArea.astro";
         name="mail"
       />
       <Select name="select" placeholder="Wybierz temat" />
-      <TextArea />
+      <TextArea  />
       <button type="button" class="btn primary full">Wyślij</button>
-    </form>
+      </form>
+    </div>
+    <div>
+
+     
+      </div>
+    <div>
+      <img src="/assets/images/quality-1.png"  class="rounded-2xl ml-auto mb-8"/>
+      <div class="text-main-200 grid md:flex gap-6">
+        <div class="flex gap-4 items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M0.5 3.95399H23.5V19.954H0.5V3.95399Z" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22.9118 4.536L12.0008 13.454L1.08984 4.536" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4>pomoc@mrnodu.pl</h4>
+        </div>
+        <div  class="flex gap-4 items-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.5 0.5H7.5C6.39543 0.5 5.5 1.39543 5.5 2.5V21.5C5.5 22.6046 6.39543 23.5 7.5 23.5H16.5C17.6046 23.5 18.5 22.6046 18.5 21.5V2.5C18.5 1.39543 17.6046 0.5 16.5 0.5Z" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.5 19.5H5.5" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.5 4.5H5.5" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.5 2.5H13.5" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 21.75C11.8619 21.75 11.75 21.6381 11.75 21.5C11.75 21.3619 11.8619 21.25 12 21.25" stroke="#651B22"/>
+            <path d="M12 21.75C12.1381 21.75 12.25 21.6381 12.25 21.5C12.25 21.3619 12.1381 21.25 12 21.25" stroke="#651B22"/>
+            </svg>
+            
+          <h4>+48 22 600 600 600</h4>
+        </div>
+      </div>
   </div>
 </section>

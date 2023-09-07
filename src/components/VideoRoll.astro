@@ -1,8 +1,9 @@
 ---
 import VideoSlider from "../components/VideoSlider.astro";
+const {bg_class} = Astro.props
 ---
 
-<section class="py-20 bg-second-400">
+<section class={`py-20  ${bg_class ? bg_class : 'bg-second-400'}`}>
     <div class="container wrapper max-w-[1274px]">
       <div class="swiper video-swiper">
         <div class="swiper-wrapper">

@@ -1,8 +1,8 @@
 ---
-const { options, name, placeholder } = Astro.props;
+const { options, name, placeholder, className } = Astro.props;
 ---
 
-<div class="custom-select">
+<div class={`custom-select ${className ? className : ""}`}>
   <input
     class="hidden lg:inline"
     type="text"
