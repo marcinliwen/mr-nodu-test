@@ -19,7 +19,7 @@ window.onload = () => {
         filterBox.classList.add("open");
         filtersAction.classList.add("active");
 
-        filterBox.style.height = filterBoxHeight + "px";
+        filterBox.style.height = filterBoxHeight +10 + "px";
       }
     });
   }

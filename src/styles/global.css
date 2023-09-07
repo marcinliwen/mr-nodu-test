@@ -434,13 +434,13 @@
     opacity: 0;
   }
   .custom-input input::placeholder {
-    opacity: 0;
+    opacity: 1;
   }
   .custom-input input:not(:focus):not(:placeholder-shown) + label {
     opacity: 0;
   }
   .custom-input input:not(:focus):not(:placeholder-shown) {
-    background: rgba(244, 196, 141, 0.30);
+    background: #fbeedd;
   }
   .custom-input.error input {
     background: rgba(214, 43, 57, 0.10) !important;

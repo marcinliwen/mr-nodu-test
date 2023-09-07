@@ -1,16 +1,24 @@
 ---
+import Input from "../components/Input.astro";
+
 const category = [
   "Zdrowie",
   "Przepisy",
   "Atesty",
   "Sprzedaż",
   "Sieć dystrybucji",
+  "Zdrowie",
+  "Sieć dystrybucji",
+  "Atesty",
+  "Sprzedaż",
+  "Przepisy",
+ 
 ];
 ---
 
 <section class="pt-28 lg:pt-52 pb-40 bg-main-100">
   <div class="container wrapper flex flex-wrap">
-    <div class="text-white my-auto lg:pl-[83px] mb-12 lg:mb-0">
+    <div class="text-white  lg:pl-[83px] mb-12 lg:my-auto">
         <h1 class="mb-4">Baza wiedzy</h1>
         <h3>co wyróżnia naszą posypkę panko?</h3>
     </div>
@@ -73,7 +81,7 @@ const category = [
             <span class="text-gold-100 font-semibold link">Wyczyść filtry</span>
           </button>
         </div>
-        <div class="flex flex-wrap gap-4 filter-box open">
+        <div class="flex flex-wrap gap-6 filter-box open">
           {
             category.map((item) => (
               <label class="w-full md:w-auto h-12 py-3 px-4 rounded-lg  focus:bg-white border border-gold-100 focus:outline-none flex gap-2 items-center justify-center relative cursor-pointer">

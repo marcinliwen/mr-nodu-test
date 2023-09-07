@@ -2,8 +2,8 @@
     overflow-x: hidden;
     transition-duration: 0.3s;
     padding: 0;
-    transition-timing-function: "cubic-bezier(0.53, 0.00, 0.43, 1.00)";
-    transition: "height";
+    transition-timing-function: cubic-bezier(0.53, 0.00, 0.43, 1.00);
+    transition-property: height; 
   }
   .filter-box.open {
     /* height: 395px; */
