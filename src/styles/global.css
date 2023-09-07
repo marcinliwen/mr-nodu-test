@@ -196,15 +196,14 @@
 }
 .text-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   align-items: center;
 }
 
-.text-group blockquote {
-  flex: 1;
-}
 
-.text-group p {
+
+.text-group blockquote + p {
   flex: 1;
   display: block;
 }
