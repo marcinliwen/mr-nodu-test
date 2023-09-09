@@ -18,7 +18,14 @@ import BlogRollCard from "./BlogRollCard.astro";
           })
         }
       </div>
-      <div class="slider-navigation">
+      <div class="w-full  mt-12">
+        <div class="flex items-center gap-7 mx-auto w-full justify-center">
+          <div class="current"></div>
+          <div class="swiper-scrollbar max-w-[172px]"></div>
+          <div class="total"></div>
+        </div>
+      </div>
+      <!-- <div class="slider-navigation">
         <button class="swiper-button-prev nav-prev"
           ><svg
             width="32"
@@ -61,7 +68,7 @@ import BlogRollCard from "./BlogRollCard.astro";
             </defs>
           </svg>
         </button>
-      </div>
+      </div> -->
     </div>
     <a class="btn full primary mx-auto mt-12">Odwiedź naszą bazę wiedzy</a>
   </div>

@@ -194,12 +194,21 @@ const tabNav = document.querySelectorAll(".tab-nav");
    * sliders
    */
   const addcounter = (swiper) => {
-    const counter = document.createElement("div");
+   /*  const counter = document.createElement("div");
     counter.classList.add("counter");
     counter.append(`${swiper.activeIndex + 1}/${swiper.slides.length}`);
     if (swiper.pagination.el) {
       swiper.pagination.el.prepend(`${swiper.activeIndex + 1}`);
       swiper.pagination.el.append(`${swiper.slides.length}`)
+    } */
+    const curentElement = swiper.el.querySelector('.current')
+    const totalElement = swiper.el.querySelector('.total')
+    console.log('swiper', swiper.el)
+    if(curentElement){
+      curentElement.append(addZerotoDigit(Math.ceil(swiper.activeIndex) + 1))
+    }
+    if(totalElement){
+      totalElement.append(addZerotoDigit(Math.ceil(swiper.slides.length)))
     }
   };
   const fractionCounter = (swiper) =>{
@@ -208,9 +217,18 @@ const tabNav = document.querySelectorAll(".tab-nav");
     counter.append(`${Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}/${
       Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)
     }`);
+
     if (swiper.pagination.el) {
       swiper.pagination.el.prepend(`${Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}`);
       swiper.pagination.el.append(`${Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)}`)
+    }
+    const curentElement = swiper.el.querySelector('.current')
+    const totalElement = swiper.el.querySelector('.total')
+    if(curentElement){
+      curentElement.append(addZerotoDigit(Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1))
+    }
+    if(totalElement){
+      totalElement.append(addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)))
     }
   }
   if (typeof Swiper !== "undefined") {
@@ -272,7 +290,7 @@ const tabNav = document.querySelectorAll(".tab-nav");
       autoplay: {
         delay: 3000,
       },
-      pagination: {
+     /*  pagination: {
         enabled: true,
         el: ".swiper-pagination",
         clickable: true,
@@ -284,16 +302,26 @@ const tabNav = document.querySelectorAll(".tab-nav");
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
+      }, */
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
       },
+     
       on: {
         init: function (swiper) {
           fractionCounter(swiper);
         },
         slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}/${
-            Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)
-          }`;
+          const curentElement = swiper.el.querySelector('.current')
+          const totalElement = swiper.el.querySelector('.total')
+          if(curentElement){
+            curentElement.innerHTML = addZerotoDigit(Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1)
+          }
+          if(totalElement){
+            totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup))
+          }
         },
       },
       breakpoints: {
@@ -337,32 +365,44 @@ const tabNav = document.querySelectorAll(".tab-nav");
         1024: { slidesPerView: 3, slidesPerGroup: 3 },
       },
     });
+
     const videoSwiper = new Swiper(".video-swiper", {
       slidesPerView: 1,
       spaceBetween: 16,
-      pagination: {
+      /* pagination: {
         enabled: true,
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
           return '<span class="' + className + '"></span> ';
         },
-      },
+      }, */
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
       },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
+      },
+     
       on: {
         init: function (swiper) {
-          //addcounter(swiper);
+          addcounter(swiper);
         },
-        /* slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${swiper.activeIndex + 1}/${
-            swiper.slides.length
-          }`;
-        }, */
-      },
+        slideChange: function (swiper) {
+          const curentElement = swiper.el.querySelector('.current');
+          const totalElement = swiper.el.querySelector('.total');
+          console.log('curentElement', curentElement)
+          if(curentElement){
+            curentElement.innerHTML = addZerotoDigit(Math.ceil(swiper.activeIndex) + 1)
+          }
+          if(totalElement){
+            totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length))
+          }
+        },
+      }
     });
     const productsSwiper = new Swiper(".products-swiper", {
       slidesPerView: 1,
@@ -400,27 +440,37 @@ const tabNav = document.querySelectorAll(".tab-nav");
     const referencesSwiper = new Swiper(".references-swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
-      pagination: {
+      /* pagination: {
         enabled: true,
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
           return '<span class="' + className + '"></span>';
         },
+      }, */
+      speed: 1000,
+      autoplay: {
+        delay: 3000,
       },
-      navigation: {
-        nextEl: ".nav-next",
-        prevEl: ".nav-prev",
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
       },
+     
       on: {
         init: function (swiper) {
           fractionCounter(swiper);
         },
         slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}/${
-            swiper.slides.length/swiper.params.slidesPerGroup
-          }`;
+          const curentElement = swiper.el.querySelector('.current')
+          const totalElement = swiper.el.querySelector('.total')
+          if(curentElement){
+            curentElement.innerHTML = addZerotoDigit(Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1)
+          }
+          if(totalElement){
+            totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup))
+          }
         },
       },
       breakpoints: {
@@ -512,86 +562,32 @@ const tabNav = document.querySelectorAll(".tab-nav");
     });
     const packshotSwiper = new Swiper(".packshot-swiper", {
       slidesPerView: 1,
-      /* effect: "creative",
-      creativeEffect: {
-        prev: {
-          translate: ["-100%", 0, -1],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      }, */
-      direction: "vertical",
-
-      pagination: {
-        //horizontalClass: "swiper-pagination-horizontal",
-        enabled: true,
-        el: ".swiper-pagination",
-        clickable: true,
-        type: "custom",
-       /*  formatFractionCurrent: function (number) {
-          return number > 9 ? number : '0' + number;
-      },
-      formatFractionTotal: function (number) {
-        return number > 9 ? number : '0' + number;
-      } */
-      renderCustom: function (swiper, current, total) {
-        let currentDigit = current < 10 ? '0'+ current :  current;
-        let totalDigit = total < 10 ? '0'+ total : total;
-        return '<span >'+ currentDigit +
-                ' / ' +
-                 totalDigit + ' <span class="ml-8">Lorem ipsum dolor sit amet</span> </span>';
-    }
-      },
-      breakpoints: {
-        1024: {
-          /* creativeEffect: {
-            prev: {
-              translate: [0, "-100%", -1],
-            },
-            next: {
-              translate: [0, "100%", 0],
-            },
-          }, */
-
-          allowTouchMove: true,
-        },
-      },
       /* speed: 1000,
       autoplay: {
         delay: 3000,
       }, */
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
+      },
+     
       on: {
-        /* init: function (swiper) {
-          addcounter(swiper);
-          if (!isMobile) {
-            let imgHeight = document.querySelector(
-              ".home-swiper .swiper-slide img"
-            ).offsetHeight;
-            let bottomDistance = imgHeight / 2 + 32;
-            document.querySelector(
-              ".home-swiper .slider-navigation"
-            ).style.bottom = "calc(50% - " + bottomDistance + "px)";
-          }
-        },
-        resize: function (swiper) {
-          if (!isMobile) {
-            let imgHeight = document.querySelector(
-              ".home-swiper .swiper-slide img"
-            ).offsetHeight;
-            let bottomDistance = imgHeight / 2 + 32;
-            document.querySelector(
-              ".home-swiper .slider-navigation"
-            ).style.bottom = "calc(50% - " + bottomDistance + "px)";
-          }
+        init: function (swiper) {
+          fractionCounter(swiper);
         },
         slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${swiper.activeIndex + 1}/${
-            swiper.slides.length
-          }`;
-        }, */
-      },
+          const curentElement = swiper.el.querySelector('.current')
+          const totalElement = swiper.el.querySelector('.total')
+          if(curentElement){
+            curentElement.innerHTML = addZerotoDigit(Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1)
+          }
+          if(totalElement){
+            totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup))
+          }
+        },
+      }
+    
     });
     const brandsSwiper = new Swiper(".brand-swiper", {
       slidesPerView: 1,
@@ -1107,3 +1103,7 @@ function letCount() {
 
 
 
+/** add 0 befor digit */
+function addZerotoDigit(number){
+  return number < 10 ? '0'+number : number;
+}
