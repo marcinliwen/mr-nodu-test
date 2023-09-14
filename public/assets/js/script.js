@@ -588,10 +588,10 @@ const tabNav = document.querySelectorAll(".tab-nav");
     });
     const packshotSwiper = new Swiper(".packshot-swiper", {
       slidesPerView: 1,
-      /* speed: 1000,
+      speed: 1000,
       autoplay: {
-        delay: 3000,
-      }, */
+        delay: 4500,
+      }, 
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,
@@ -612,9 +612,10 @@ const tabNav = document.querySelectorAll(".tab-nav");
             totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup))
           }
         },
-      }
+      },
     
     });
+
     const brandsSwiper = new Swiper(".brand-swiper", {
       slidesPerView: 1,
       spaceBetween: 64,
