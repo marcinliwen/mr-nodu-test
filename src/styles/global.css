@@ -768,6 +768,17 @@
     opacity: 1;
     transform: translateZ(0);
   }
+  .inView.fadeIn{
+    opacity: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .inView.is_visible.fadeIn {
+    opacity: 1;
+  }
 }
 .body-overflow {
   overflow: hidden;
