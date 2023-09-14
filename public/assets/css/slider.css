@@ -65,7 +65,7 @@
 }
 .home-swiper .slider-navigation{
   position: absolute;
-    bottom: 80px;
+    bottom: 32px;
     top: auto;
     margin: 0;
     z-index: 10;
