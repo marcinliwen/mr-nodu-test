@@ -59,11 +59,7 @@
 
   color: #330a21;
 }
-.home-swiper {
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
-}
+
 .home-swiper .slider-navigation{
   position: absolute;
     bottom: 80px;

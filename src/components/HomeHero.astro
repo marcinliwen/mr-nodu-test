@@ -2,8 +2,8 @@
 const { bg, video, image } = Astro.props;
 ---
 
-<section style={`${bg && "background:" + bg}`} class="bg-bordo-100 relative getCursorPosition left-img">
-  <div class="swiper home-swiper h-screen relative !z-20">
+<section style={`${bg && "background:" + bg}`} class="bg-bordo-100 relative getCursorPosition left-img h-screen">
+  <div class="swiper home-swiper h-full relative !z-20">
     <div class="swiper-wrapper">
       {
         [1, 2, 3, 4].map((item) => {
