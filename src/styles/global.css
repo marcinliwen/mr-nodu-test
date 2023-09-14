@@ -395,7 +395,7 @@
     .btn.secondary:hover,
     .btn-small.secondary:hover {
       color: #fff !important;
-      background: #7D141B;
+      background: transparent;
       transition: all 0.6s ease;
       opacity: 1;
       border-color: #fff;
@@ -403,10 +403,9 @@
     .btn.secondary:active,
     .btn-small.secondary:active {
       color: #fff !important;
-      background: #7D141B;
+      background: transparent;
       transition: all 0.6s ease;
       border-color: #fff;
-      background: #b56f40;
     }
     .btn.primary.full::before {
       background: #fff;
@@ -1072,4 +1071,25 @@ select.native-select:focus {
   to {
     opacity: 1;
   }
+}
+
+.left-cover, .right-cover{
+  opacity: 1;
+  transform: scale(1);
+  transition-duration: 900ms;
+}
+.left-img .left-cover{
+  opacity: 0;
+  transform: scale(7);
+}
+.bg-image{
+  transform: scale(1);
+  transition-duration: 900ms;
+}
+.left-img .bg-image{
+  transform: scale(1.05);
+}
+.right-img .right-cover{
+  opacity: 0;
+  transform: scale(7);
 }

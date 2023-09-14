@@ -2,13 +2,13 @@
 const { bg, video, image } = Astro.props;
 ---
 
-<section style={`${bg && "background:" + bg}`} class="bg-bordo-100 relative">
+<section style={`${bg && "background:" + bg}`} class="bg-bordo-100 relative getCursorPosition left-img">
   <div class="swiper home-swiper h-screen relative !z-20">
     <div class="swiper-wrapper">
       {
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => {
           return (
-            <div class="swiper-slide relative flex items-center img-cover md:img-cover-none">
+            <div class="swiper-slide relative flex items-center img-cover md:img-cover-none ">
               <div class=" absolute left-0 right-0 z-20 top-8 lg:top-auto h-full">
                 <div class="container wrapper flex items-center h-full">
                   <div class="items-center relative z-10">
@@ -23,10 +23,22 @@ const { bg, video, image } = Astro.props;
                  
                 </div>
               </div>
-              <div class="absolute hidden md:block top-0 bottom-0 right-0 z-10 w-[50%]">
-                <img class="w-full h-full absolute top-0 left-0 object-cover " src="/assets/images/nodu-cover.svg"/>
+              <div class="absolute inset-0 grid grid-cols-2 z-0">
+                <div class=" relative overflow-hidden">
+         
+                    <img class="left-cover w-full h-full  top-0 left-0 absolute object-cover inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
+                
+                <img src="/assets/images/home-hero.jpeg" class="w-full h-full  object-cover bg-image z-10 relative"/>
+                </div>
+                <div class="relative  overflow-hidden">
+                  <img class="right-cover w-full h-full  top-0 left-0 object-cover absolute inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
+                  <video autoplay="" playsinline="" loop="" controlslist="nodownload" poster="https://c.stocksy.com/a/9bfI00/z9/4449811.jpg" src="https://c.stocksy.com/a/9bfI00/y0/4449811.mp4" class="relative z-0 w-full h-full object-cover" muted=""></video>
                   </div>
-              <img src="/assets/images/home-hero.jpeg" class="w-full h-full absolute top-0 left-0 object-cover "/>
+                
+              </div>
+              
+              
+             
             </div>
           );
         })
