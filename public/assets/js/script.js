@@ -5,21 +5,14 @@ window.onload = () => {
   const isHomeHero = document.querySelector('.getCursorPosition')
   if(isHomeHero){
     const documentHalfWidth = document.body.clientWidth/2;
-    const maxHeight = isHomeHero.clientHeight;
-    console.log('1/2:', document.body.clientWidth/2);
-    console.log('height:', maxHeight)
     document.addEventListener('mousemove',(e)=>{
         if(e.clientX <= documentHalfWidth){
-          console.log('left')
           isHomeHero.classList.add('left-img');
           isHomeHero.classList.remove('right-img')
         }else{
-          console.log('right')
           isHomeHero.classList.remove('left-img');
           isHomeHero.classList.add('right-img');
         }
-      
-      //console.log(e.clientX, e.clientY)
     })
   }
   /**

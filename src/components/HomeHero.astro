@@ -6,32 +6,33 @@ const { bg, video, image } = Astro.props;
   <div class="swiper home-swiper h-screen relative !z-20">
     <div class="swiper-wrapper">
       {
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => {
+        [1, 2, 3, 4].map((item) => {
           return (
-            <div class="swiper-slide relative flex items-center img-cover md:img-cover-none ">
+            <div class="swiper-slide relative flex  md:mt-0 md:items-center ">
               <div class=" absolute left-0 right-0 z-20 top-8 lg:top-auto h-full">
-                <div class="container wrapper flex items-center h-full">
+                <div class="container wrapper flex items-start md:items-center h-full mt-[120px] md:mt-0 max-[678px]:p-0 ">
                   <div class="items-center relative z-10">
-                    <div class="lg:max-w-[620px] pr-10 lg:pr-0">
-                      <h1 class="text-main-200   mb-6 ">
+                    <div class="lg:max-w-[620px] lg:pr-0">
+                      <h1 class="text-main-200   mb-6 max-[678px]:px-4">
                         Panko Mr Nodu najbardziej chrupiące
                       </h1>
-                      <span class="mb-8 text-2xl font-normal block max-w-[435px]   md:text-main-300">chrupiące i najlepszej jakości, takie jest nasze panko!</span>
-                      <a class="btn primary full">Poznaj produkt</a>
+                      <div class="mt-16 bg-white/70 md:bg-transparent px-4 py-8 md:px-0 md:py-0">
+                        <span class=" md:mt-0 mb-8 text-2xl font-normal block max-w-[435px]   md:text-main-300">chrupiące i najlepszej jakości, takie jest nasze panko!</span>
+                        <a class="btn primary full mx-auto md:ml-0">Poznaj produkt</a>
+                      </div>
+                     
                     </div>
                   </div>
                  
                 </div>
               </div>
-              <div class="absolute inset-0 grid grid-cols-2 z-0">
-                <div class=" relative overflow-hidden">
-         
+              <div class="absolute inset-0 grid md:grid-cols-2 z-0 ">
+                <div class="hidden md:block relative overflow-hidden">
                     <img class="left-cover w-full h-full  top-0 left-0 absolute object-cover inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
-                
                 <img src="/assets/images/home-hero.jpeg" class="w-full h-full  object-cover bg-image z-10 relative"/>
                 </div>
-                <div class="relative  overflow-hidden">
-                  <img class="right-cover w-full h-full  top-0 left-0 object-cover absolute inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
+                <div class="relative  overflow-hidden  bottom-0">
+                  <img class="hidden md:block right-cover w-full h-full  top-0 left-0 object-cover absolute inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
                   <video autoplay="" playsinline="" loop="" controlslist="nodownload" poster="https://c.stocksy.com/a/9bfI00/z9/4449811.jpg" src="https://c.stocksy.com/a/9bfI00/y0/4449811.mp4" class="relative z-0 w-full h-full object-cover" muted=""></video>
                   </div>
                 
@@ -44,7 +45,7 @@ const { bg, video, image } = Astro.props;
         })
       }
     </div>
-    <div class="slider-navigation md:h-full md:absolute ">
+    <div class="slider-navigation md:h-full md:absolute bg-white/70 md:bg-transparent">
       <div class="wrapper w-full md:h-full">
         <div class="container relative md:h-full"><div class="swiper-pagination !text-main-300 lora text-base"></div></div>
       </div>
