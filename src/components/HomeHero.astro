@@ -17,8 +17,8 @@ const { bg, video, image } = Astro.props;
                         Panko Mr Nodu najbardziej chrupiące
                       </h1>
                       <div class="mt-12 bg-white/70 md:bg-transparent px-4 py-8 md:px-0 md:py-0">
-                        <span class="inView fadeIn md:mt-0 mb-8 text-2xl font-normal block max-w-[435px]   md:text-main-300">chrupiące i najlepszej jakości, takie jest nasze panko!</span>
-                        <a class="inView fadeIn btn primary full mx-auto md:ml-0">Poznaj produkt</a>
+                        <span class="inView fadeIn  md:mt-0 mb-8 text-2xl font-normal block max-w-[435px]   md:text-main-300">chrupiące i najlepszej jakości, takie jest nasze panko!</span>
+                        <a class="inView fadeIn  btn primary full mx-auto md:ml-0">Poznaj produkt</a>
                       </div>
                      
                     </div>
@@ -26,7 +26,7 @@ const { bg, video, image } = Astro.props;
                  
                 </div>
               </div>
-              <div class="absolute inset-0 grid md:grid-cols-2 z-0 ">
+              <div class="absolute inset-0 md:grid md:grid-cols-2 z-0 hidden">
                 <div class="hidden md:block relative overflow-hidden">
                     <img class="left-cover w-full h-full  top-0 left-0 absolute object-cover inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
                 <img src="/assets/images/home-hero.jpeg" class="w-full h-full  object-cover bg-image z-10 relative"/>
@@ -34,7 +34,7 @@ const { bg, video, image } = Astro.props;
                 <div class="relative  overflow-hidden  bottom-0">
                   <img class="hidden md:block right-cover w-full h-full  top-0 left-0 object-cover absolute inset-0 z-20" src="/assets/images/nodu-cover.svg"/> 
                   <video autoplay="" playsinline="" loop="" controlslist="nodownload" poster="https://c.stocksy.com/a/9bfI00/z9/4449811.jpg" src="https://c.stocksy.com/a/9bfI00/y0/4449811.mp4" class="relative z-0 w-full h-full object-cover" muted=""></video>
-                  </div>
+                </div>
                 
               </div>
               
@@ -52,19 +52,15 @@ const { bg, video, image } = Astro.props;
     </div>
    
   </div>
-  {
-    video && (
+  
       <video
         autoplay="true"
         playsinline=""
         loop=""
         controlslist="nodownload"
-        poster="https://c.stocksy.com/a/XhRK00/z9/4873047.jpg"
-        src={video.link}
-        class="w-full h-full absolute top-0 left-0 object-cover z-10"
+        poster="https://c.stocksy.com/a/9bfI00/z9/4449811.jpg" src="https://c.stocksy.com/a/9bfI00/y0/4449811.mp4"
+        class="w-full h-full absolute top-0 left-0 object-cover z-10 md:hidden"
         muted=""
       />
-    )
-    
-  }
+   
 </section>
