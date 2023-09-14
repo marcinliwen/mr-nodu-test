@@ -2,15 +2,15 @@
 const { bg, video, image } = Astro.props;
 ---
 
-<section style={`${bg && "background:" + bg}`} class="bg-bordo-100 relative getCursorPosition left-img home-hero">
+<section class="bg-white relative getCursorPosition left-img home-hero">
   <div class="swiper home-swiper h-full relative !z-20">
     <div class="swiper-wrapper">
       {
         [1, 2, 3, 4].map((item) => {
           return (
             <div class="swiper-slide relative flex  md:mt-0 md:items-center ">
-              <div class=" absolute left-0 right-0 z-20 top-8 lg:top-auto h-full">
-                <div class="container wrapper flex items-start md:items-center h-full mt-[80px] md:mt-0 max-[678px]:p-0 ">
+              <div class=" relative  z-20 md:h-full">
+                <div class="container wrapper flex items-start md:items-center h-full mt-[100px] md:mt-0 max-[678px]:p-0 ">
                   <div class="items-center relative z-10">
                     <div class="lg:max-w-[620px] lg:pr-0">
                       <h1 class="text-main-200   mb-6 max-[678px]:px-4">
