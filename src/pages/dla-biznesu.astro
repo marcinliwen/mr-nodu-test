@@ -64,7 +64,13 @@ const timeLine =[
                       stroke-linejoin="round"></path>
                   </svg>
                 </button>
-                <div class="swiper-pagination"></div>
+                <div class="w-full ">
+                  <div class="flex items-center gap-7 mx-auto w-full justify-center">
+                    <div class="current"></div>
+                    <div class="swiper-scrollbar max-w-[100px] lg:max-w-[341px]"></div>
+                    <div class="total"></div>
+                  </div>
+                </div>
                 <button class="swiper-button-next nav-next">
                   <svg
                     width="32"
@@ -96,11 +102,11 @@ const timeLine =[
         </div>
         <span class="absolute left-0 right-0 h-[1px] bg-main-100 bottom-[340px]"></span>
     </section>
-    <section>
-      <div class="flex flex-wrap">
-        <img  src="/assets/images/cereales-1.png"/>
-        <img  src="/assets/images/cereales-2.png"/>
-        <img  src="/assets/images/cereales-3.png"/>
+    <section >
+      <div class="grid md:grid-cols-3">
+        <img class="w-full"  src="/assets/images/cereales-1.png"/>
+        <img class="w-full"  src="/assets/images/cereales-2.png"/>
+        <img class="w-full"  src="/assets/images/cereales-3.png"/>
       </div>
     </section>
     <section class="py-20 bg-second-300">

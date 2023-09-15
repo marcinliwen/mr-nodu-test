@@ -316,19 +316,10 @@ const tabNav = document.querySelectorAll(".tab-nav");
       autoplay: {
         delay: 3000,
       },
-     /*  pagination: {
-        enabled: true,
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '"></span>';
-        }, 
-        
-      },
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
-      }, */
+      },
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,
@@ -478,6 +469,10 @@ const tabNav = document.querySelectorAll(".tab-nav");
       autoplay: {
         delay: 3000,
       },
+      navigation: {
+        nextEl: ".nav-next",
+        prevEl: ".nav-prev",
+      },
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,
@@ -619,71 +614,57 @@ const tabNav = document.querySelectorAll(".tab-nav");
     const brandsSwiper = new Swiper(".brand-swiper", {
       slidesPerView: 1,
       spaceBetween: 64,
-      pagination: {
-        enabled: true,
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '"></span>';
-        },
-      },
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
       },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
+      },
+     
       on: {
         init: function (swiper) {
-          //fractionCounter(swiper);
+          fractionCounter(swiper);
         },
-        /* slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}/${
-            Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)
-          }`;
-        }, */
+        slideChange: function (swiper) {
+          const curentElement = swiper.el.querySelector('.current')
+          const totalElement = swiper.el.querySelector('.total')
+          if(curentElement){
+            curentElement.innerHTML = addZerotoDigit(Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1)
+          }
+          if(totalElement){
+            totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup))
+          }
+        },
       },
       breakpoints: {
         760: {
-          slidesPerView: 2, 
+          slidesPerView: 2,slidesPerGroup: 2
         },
-        1024: {
-          slidesPerView: 3, 
-        },
+        1024: { slidesPerView: 3, slidesPerGroup: 3 },
       },
     });
     const timelineSwiper = new Swiper(".timeLine-swiper", {
       slidesPerView: 1,
       spaceBetween: 64,
-      pagination: {
-        enabled: true,
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '"></span>';
-        },
-      },
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
       },
-      on: {
-        init: function (swiper) {
-          //fractionCounter(swiper);
-        },
-        /* slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1}/${
-            Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup)
-          }`;
-        }, */
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
       },
+     
+      
       breakpoints: {
         760: {
-          slidesPerView: 2, 
+          slidesPerView: 2
         },
-        1024: {
-          slidesPerView: 3, 
-        },
+        1024: { slidesPerView: 3},
       },
     });
     let $lgSwiper = document.getElementById("lg-swipper");
