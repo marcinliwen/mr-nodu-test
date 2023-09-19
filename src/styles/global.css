@@ -379,7 +379,7 @@
     .btn-small.primary.full:active {
       color: #7D141B !important;
       transition: all 0.6s ease;
-      background: #e5cfda;
+      background: #f4ebeb;
     }
     .btn.primary.outlined:hover {
       color: #fff;
@@ -403,7 +403,7 @@
     .btn.secondary:active,
     .btn-small.secondary:active {
       color: #fff !important;
-      background: transparent;
+      background: #ffffff26;
       transition: all 0.6s ease;
       border-color: #fff;
     }

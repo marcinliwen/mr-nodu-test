@@ -351,6 +351,7 @@ const tabNav = document.querySelectorAll(".tab-nav");
 
     const blogRollCategorySwiper = new Swiper(".blog-category-swiper", {
       slidesPerView: 1,
+      speed: 1000,
       spaceBetween: 16,
       pagination: {
         enabled: true,
@@ -385,15 +386,8 @@ const tabNav = document.querySelectorAll(".tab-nav");
 
     const videoSwiper = new Swiper(".video-swiper", {
       slidesPerView: 1,
+      speed: 1000,
       spaceBetween: 16,
-      /* pagination: {
-        enabled: true,
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '"></span> ';
-        },
-      }, */
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
@@ -423,6 +417,7 @@ const tabNav = document.querySelectorAll(".tab-nav");
     });
     const productsSwiper = new Swiper(".products-swiper", {
       slidesPerView: 1,
+      speed: 1000,
       navigation: {
         nextEl: ".nav-next",
         prevEl: ".nav-prev",
@@ -497,27 +492,11 @@ const tabNav = document.querySelectorAll(".tab-nav");
     });
     const homeSwiper = new Swiper(".home-swiper", {
       slidesPerView: 1,
-      /* effect: "creative",
-      creativeEffect: {
-        prev: {
-          translate: ["-100%", 0, -1],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      }, */
       pagination: {
-        //horizontalClass: "swiper-pagination-horizontal",
         enabled: true,
         el: ".swiper-pagination",
         clickable: true,
         type: "custom",
-       /*  formatFractionCurrent: function (number) {
-          return number > 9 ? number : '0' + number;
-      },
-      formatFractionTotal: function (number) {
-        return number > 9 ? number : '0' + number;
-      } */
       renderCustom: function (swiper, current, total) {
         let currentDigit = current < 10 ? '0'+ current :  current;
         let totalDigit = total < 10 ? '0'+ total : total;
@@ -526,55 +505,10 @@ const tabNav = document.querySelectorAll(".tab-nav");
                  totalDigit + ' <span class="ml-8">Lorem ipsum dolor sit amet</span> </span>';
     }
       },
-      breakpoints: {
-        1024: {
-          /* creativeEffect: {
-            prev: {
-              translate: [0, "-100%", -1],
-            },
-            next: {
-              translate: [0, "100%", 0],
-            },
-          }, */
-
-          allowTouchMove: true,
-        },
-      },
       speed: 1000,
       autoplay: {
         delay: 4000,
       },  
-      on: {
-        /* init: function (swiper) {
-          addcounter(swiper);
-          if (!isMobile) {
-            let imgHeight = document.querySelector(
-              ".home-swiper .swiper-slide img"
-            ).offsetHeight;
-            let bottomDistance = imgHeight / 2 + 32;
-            document.querySelector(
-              ".home-swiper .slider-navigation"
-            ).style.bottom = "calc(50% - " + bottomDistance + "px)";
-          }
-        },
-        resize: function (swiper) {
-          if (!isMobile) {
-            let imgHeight = document.querySelector(
-              ".home-swiper .swiper-slide img"
-            ).offsetHeight;
-            let bottomDistance = imgHeight / 2 + 32;
-            document.querySelector(
-              ".home-swiper .slider-navigation"
-            ).style.bottom = "calc(50% - " + bottomDistance + "px)";
-          }
-        },
-        slideChange: function (swiper) {
-          const counter = swiper.pagination.el.querySelector(".counter");
-          counter.innerHTML = `${swiper.activeIndex + 1}/${
-            swiper.slides.length
-          }`;
-        }, */
-      },
     });
     const packshotSwiper = new Swiper(".packshot-swiper", {
       slidesPerView: 1,
