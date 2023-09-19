@@ -56,17 +56,21 @@ const hero ={
     
         
         <picture >
-  <source 
-    srcset="/assets/images/produkty-hero.png"
-    media="(min-width: 764px)"
-  />
-  
-  <img 
-  class="absolute left-0 top-0 w-full h-full object-cover object-right"
-    src="/assets/images/produkty-hero-mobile.png" 
-    alt="Produkty"
-  />
-</picture>
+          <source 
+            srcset="/assets/images/produkty-hero.png"
+            media="(min-width: 1024px)"
+          />
+          <source 
+            srcset="/assets/images/produkty-hero-tab.png"
+            media="(min-width: 764px)"
+          />
+         
+          <img 
+          class="absolute left-0 top-0 w-full h-full object-cover object-right"
+            src="/assets/images/produkty-hero-mobile.png" 
+            alt="Produkty"
+          />
+        </picture>
       
             </div>
         )

@@ -6,7 +6,15 @@
             {[1,2,3,4].map((item, index)=>{
                 return(
                     <div class="swiper-slide relative pt-32 pb-24">
-                        <img src="/assets/images/packshot-slider.png" class="absolute top-0 left-0 w-full h-full object-cover"/>
+                           
+        <picture >
+         
+          <source 
+            srcset="/assets/images/packshot-slider.png"
+            media="(min-width: 764px)"
+          />
+                        <img src="/assets/images/packshot-slider-mobile.png" class="absolute top-0 left-0 w-full h-full object-cover"/>
+                        </picture>
                         <div class="container wrapper">
                             <div class="text-white relative max-w-[482px] md:ml-auto lg:mr-20">
                                 <h2 class="mb-4">Linia produktów Mr Nodu</h2>
