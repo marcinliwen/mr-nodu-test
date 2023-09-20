@@ -1,8 +1,15 @@
 ---
 ---
 
-<section class="relative py-16">
-    <img src="/assets/images/packshot-points.png" class="absolute top-0 left-0 w-full h-full object-cover"/>
+<section class="relative py-16 bg-second-300">
+    <picture>
+        <source 
+        srcset="/assets/images/packshot-points.png"
+        media="(min-width: 1024px)"
+      />
+        <img src="/assets/images/packshot-points-mobile.png" class="inView slideUp md:absolute top-0 left-0 w-full h-full object-cover"/>
+    </picture>
+    
     <div class="container wrapper">
         <div class="max-w-[482px] text-white relative lg:ml-20 inView slideUp">
             <h2 class="mb-8">Dlaczego nasze panko jest najlepsze?</h2>

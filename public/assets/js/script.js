@@ -384,6 +384,41 @@ window.onload = () => {
         1024: { slidesPerView: 3},
       },
     });
+    const brandsSwiper = new Swiper(".brand-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 64,
+      navigation: {
+        nextEl: ".nav-next",
+        prevEl: ".nav-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
+      },
+     
+      on: {
+        init: function (swiper) {
+          fractionCounter(swiper);
+        },
+        slideChange: function (swiper) {
+          const curentElement = swiper.el.querySelector('.current')
+          const totalElement = swiper.el.querySelector('.total')
+          if(curentElement){
+            curentElement.innerHTML = addZerotoDigit(Math.ceil(swiper.activeIndex/swiper.params.slidesPerGroup) + 1)
+          }
+          if(totalElement){
+            totalElement.innerHTML = addZerotoDigit(Math.ceil(swiper.slides.length/swiper.params.slidesPerGroup))
+          }
+        },
+      },
+      breakpoints: {
+        760: {
+          slidesPerView: 2,slidesPerGroup: 2
+        },
+        1024: { slidesPerView: 3, slidesPerGroup: 3 },
+      },
+    });
   }
 
   const categoryNavBtns = document.querySelectorAll(".faq-category-nav button");
