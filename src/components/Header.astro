@@ -79,7 +79,7 @@ const mainMenu = [
           </svg>
         </button>
         <nav
-          class={`${textdark ? "text-main-200" : "text-white"}`}
+          class={`${textdark ? "text-main-200" : "text-main-200 lg:text-white"}`}
         >
           <ul class="lg:flex lg:gap-10 items-start lg:items-center main-nav">
             <!-- {
@@ -103,8 +103,8 @@ const mainMenu = [
                         tabindex="0"
                         class={`p-3 lg:p-0 flex justify-between menu-text cursor-pointer  ${
                           textdark
-                            ? "text-main-100"
-                            : "text-white"
+                            ? "text-main-200"
+                            : "text-main-200 lg:text-white"
                         }`}
                       >
                         {item.title}

@@ -330,16 +330,16 @@ window.onload = () => {
     }
       },
       speed: 1000,
-      autoplay: {
+      /* autoplay: {
         delay: 4000,
-      },  
+      },   */
     });
     const packshotSwiper = new Swiper(".packshot-swiper", {
       slidesPerView: 1,
       speed: 1000,
-      autoplay: {
+      /* autoplay: {
         delay: 4500,
-      }, 
+      },  */
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,

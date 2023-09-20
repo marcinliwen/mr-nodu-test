@@ -1,42 +1,55 @@
 ---
 ---
-<section>
-    <div class="swiper packshot-swiper max-h-[668px] lg:max-h-[583px]">
-        <div class="swiper-wrapper">
-            {[1,2,3,4].map((item, index)=>{
-                return(
-                    <div class="swiper-slide relative pt-32 pb-24">
-                           
-        <picture >
-         
-          <source 
-            srcset="/assets/images/packshot-slider.png"
-            media="(min-width: 764px)"
-          />
-                        <img src="/assets/images/packshot-slider-mobile.png" class="absolute top-0 left-0 w-full h-full object-cover"/>
-                        </picture>
-                        <div class="container wrapper">
-                            <div class="text-white relative max-w-[482px] md:ml-auto lg:mr-20">
-                                <h2 class="mb-4">Linia produktów Mr Nodu</h2>
-                                <h5 class="mb-12">lorem ipsum dolor sit amet</h5>
-                                <p class="mb-10">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p>
-                                <a class="btn secondary">Poznaj nasze produkty</a>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })}
-         </div>
-         <div class="absolute md:top-0 bottom-8 md:bottom-0 pointer-events-none w-full z-20">
-         <div class="wrapper w-full md:h-full vertical-bar">
-          <div class="container relative md:h-full">
-          <div class="flex items-center gap-7 mx-auto w-full justify-center pagination-bar text-white lora">
+
+<section class="packshot-gradient">
+  <div class="swiper packshot-swiper md:max-h-[668px] lg:max-h-[583px]">
+    <div class="swiper-wrapper">
+      {
+        [1, 2, 3, 4].map((item, index) => {
+          return (
+            <div class="swiper-slide relative ">
+              <div class="container wrapper">
+                <div class="grid md:grid-cols-2 items-center pb-20 md:pb-0">
+                  <picture>
+                    <source
+                      srcset="/assets/images/panko-packshot.png"
+                      media="(min-width: 764px)"
+                    />
+                    <img src="/assets/images/panko-packshot.png" class="w-full md:max-w-[500px] mx-auto" />
+                  </picture>
+                  <div class="text-white relative max-w-[482px] md:ml-auto lg:ml-20">
+                    <h2 class="mb-4 max-w-[14ch] md:max-w-full">Linia produktów Mr Nodu</h2>
+                    <h5 class="mb-4 md:mb-12">lorem ipsum dolor sit amet</h5>
+                    <p class="mb-8 md:mb-10 hidden md:block">
+                      Morem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nunc vulputate libero et velit interdum, ac aliquet odio
+                      mattis. Class aptent taciti sociosqu ad litora torquent
+                      per conubia nostra, per inceptos himenaeos. Curabitur
+                      tempus urna at turpis condimentum lobortis.
+                    </p>
+                    <a class="btn secondary mx-auto md:ml-0">Poznaj nasze produkty</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <div
+      class="absolute md:top-0 bottom-8 md:bottom-0 pointer-events-none w-full z-20"
+    >
+      <div class="wrapper w-full md:h-full vertical-bar">
+        <div class="container relative md:h-full">
+          <div
+            class="flex items-center gap-7 mx-auto w-full justify-center pagination-bar text-white lora"
+          >
             <div class="current"></div>
             <div class="swiper-scrollbar max-w-[172px]"></div>
             <div class="total"></div>
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>

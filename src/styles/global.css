@@ -178,6 +178,9 @@
   }
 }
 @layer components {
+  .packshot-gradient{
+    background: linear-gradient(180deg, #4B1701 0%, #753C11 100%);
+  }
   .post-text p{
     margin-bottom: 16px;
   }
@@ -223,7 +226,7 @@
     font-family: "Victor Serif";
   }
   .wrapper {
-    padding: 0 16px;
+    padding: 0 24px;
   }
   @media (min-width: 768px) {
     .wrapper {
