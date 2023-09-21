@@ -7,7 +7,7 @@ import References from "../components/References.astro";
 import Newsletter from "../components/Newsletter.astro";
 import PackshotPoints from "../components/Packshot_points.astro";
 import PackshotSlider from "../components/Packshot_slider.astro";
-import IconBlock from "../components/IconBlock.astro"
+import IconBlock from "../components/IconBlock.astro";
 
 const hero = {
   bg: "#750843",
@@ -21,15 +21,15 @@ const hero = {
 };
 ---
 
-<Layout title="Mr Nodu" isHome={true} textdark={true} >
+<Layout title="Mr Nodu" isHome={true} textdark={true}>
   <main>
     <HomeHero bg={hero.bg} image={hero.image} />
-    <IconBlock showTitle={true}/>
-   <PackshotSlider />
+    <IconBlock showTitle={true} />
+    <PackshotSlider />
     <References />
     <PackshotPoints />
     <BlogRoll />
-    <Instagram/>
+    <Instagram />
     <Newsletter />
   </main>
 </Layout>
@@ -38,11 +38,14 @@ const hero = {
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 
-<link rel="stylesheet" href="/assets/css/slider.css" /> 
+<link rel="stylesheet" href="/assets/css/slider.css" />
 <link rel="stylesheet" href="/assets/css/hoverReveal.css" />
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
 ></script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"
+></script>
 <script is:inline src="/assets/js/script.js"></script>

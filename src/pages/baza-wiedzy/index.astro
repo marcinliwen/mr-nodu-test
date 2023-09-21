@@ -1,67 +1,119 @@
 ---
-
 import Layout from "../../layouts/Layout.astro";
 import Filters from "../../components/Filters.astro";
-import Breadcrumps from "../../components/Breadcrumps.astro"
+import Breadcrumps from "../../components/Breadcrumps.astro";
 
-
-const posty =[1, 2, 3]
-
+const posty = [1, 2, 3];
 ---
 
-<Layout title="Mr Nodu" isHome={false} textdark={false} >
+<Layout title="Mr Nodu" isHome={false} textdark={false}>
   <main>
-   <Filters />
-   <Breadcrumps
-   breadcrumps={[
-     {
-       name: "Baza wiedzy",
-       link: "/baza-wiedzy",
-     },
-   ]}
- />
- <section class="bg-second-400 pb-10">
-    <div class="container wrapper max-w-[1274px]">
-        {posty.map(item=>{
-            return(
-            <div class="grid md:grid-cols-2 mb-20">
+    <Filters />
+    <Breadcrumps
+      breadcrumps={[
+        {
+          name: "Baza wiedzy",
+          link: "/baza-wiedzy",
+        },
+      ]}
+    />
+    <section class="bg-second-400 pb-10">
+      <div class="container wrapper max-w-[1274px]">
+        {
+          posty.map((item) => {
+            return (
+              <div class="grid md:grid-cols-2 mb-20">
                 <div class="flex flex-col  md:pr-8 lg:pr-0 mb-8 md:mb-0">
-                    <h2 class="mb-10 text-main-200">Lorem ipsum</h2>
-                    <p class="text-main-200 mb-8">Naszym celem jest dostarczanie nowoczesnych, niestandardowych rozwiązań: receptur nowych produktów i całościowych koncepcji dla sektora farmaceutycznego i stomatologicznego. Oferowanie przez nas rozwiązania już od wielu lat wspomagają i przyspieszają proces poprawy jakości życia klientów, którzy nam zaufali. Osiągamy to, dzięki współpracy z wieloma wybitnymi naukowcami i praktykami z kraju i zagranicy. A także dzięki znakomitym specjalistom, których zatrudniamy bezpośrednio w naszej firmie. Nasze preparaty poddawane są rygorystycznym badaniom zgodnie z ustawodawstwem polskim i europejskim.</p>
-                    <a class="btn primary full" href="/baza-wiedzy/post">Czytaj więcej</a>
+                  <h2 class="mb-10 text-main-200">Lorem ipsum</h2>
+                  <p class="text-main-200 mb-8">
+                    Naszym celem jest dostarczanie nowoczesnych,
+                    niestandardowych rozwiązań: receptur nowych produktów i
+                    całościowych koncepcji dla sektora farmaceutycznego i
+                    stomatologicznego. Oferowanie przez nas rozwiązania już od
+                    wielu lat wspomagają i przyspieszają proces poprawy jakości
+                    życia klientów, którzy nam zaufali. Osiągamy to, dzięki
+                    współpracy z wieloma wybitnymi naukowcami i praktykami z
+                    kraju i zagranicy. A także dzięki znakomitym specjalistom,
+                    których zatrudniamy bezpośrednio w naszej firmie. Nasze
+                    preparaty poddawane są rygorystycznym badaniom zgodnie z
+                    ustawodawstwem polskim i europejskim.
+                  </p>
+                  <a class="btn primary full" href="/baza-wiedzy/post">
+                    Czytaj więcej
+                  </a>
                 </div>
                 <div class="flex flex-col ">
-                    <img src={`/assets/images/blog-${item}.png`} class="ml-auto"/>
+                  <img
+                    src={`/assets/images/blog-${item}.png`}
+                    class="ml-auto"
+                  />
                 </div>
-            </div>
-            )
-        })}
-       <div class="flex justify-between items-center">
-        <a href="/baza-wiedzy" class="blog-prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M18.1331 0.5L6.08204 11.626C6.03137 11.6729 5.99081 11.7305 5.96304 11.795C5.93526 11.8594 5.9209 11.9293 5.9209 12C5.9209 12.0707 5.93526 12.1406 5.96304 12.205C5.99081 12.2695 6.03137 12.3271 6.08204 12.374L18.1331 23.5" stroke="#750843" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <ul class=" flex gap-4">
-            {[1,2,3,4].map(item=>{
-                return( <li><a class={`pagination-link pagination-text ${item == 1 ? 'active':''} w-10 h-10 flex justify-center items-center rounded cursor-pointer`}>{item}</a></li>)
-            })}
-    </ul>
-        <a  href="/baza-wiedzy" class="blog-next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <g clip-path="url(#clip0_297_1597)">
-                  <path d="M5.86692 23.5L17.918 12.374C17.9686 12.3271 18.0092 12.2695 18.037 12.205C18.0647 12.1406 18.0791 12.0707 18.0791 12C18.0791 11.9293 18.0647 11.8594 18.037 11.795C18.0092 11.7305 17.9686 11.6729 17.918 11.626L5.86691 0.499998" stroke="#750843" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_297_1597">
-                    <rect width="23" height="24" fill="white" transform="translate(23.5 24) rotate(180)"/>
-                  </clipPath>
-                </defs>
-              </svg>
-        </a>
-       </div>
-    </div>
-</section>
+              </div>
+            );
+          })
+        }
+        <div class="flex justify-between items-center">
+          <a href="/baza-wiedzy" class="blog-prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18.1331 0.5L6.08204 11.626C6.03137 11.6729 5.99081 11.7305 5.96304 11.795C5.93526 11.8594 5.9209 11.9293 5.9209 12C5.9209 12.0707 5.93526 12.1406 5.96304 12.205C5.99081 12.2695 6.03137 12.3271 6.08204 12.374L18.1331 23.5"
+                stroke="#750843"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <ul class="flex gap-4">
+            {
+              [1, 2, 3, 4].map((item) => {
+                return (
+                  <li>
+                    <a
+                      class={`pagination-link pagination-text ${
+                        item == 1 ? "active" : ""
+                      } w-10 h-10 flex justify-center items-center rounded cursor-pointer`}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+          <a href="/baza-wiedzy" class="blog-next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_297_1597)">
+                <path
+                  d="M5.86692 23.5L17.918 12.374C17.9686 12.3271 18.0092 12.2695 18.037 12.205C18.0647 12.1406 18.0791 12.0707 18.0791 12C18.0791 11.9293 18.0647 11.8594 18.037 11.795C18.0092 11.7305 17.9686 11.6729 17.918 11.626L5.86691 0.499998"
+                  stroke="#750843"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_297_1597">
+                  <rect
+                    width="23"
+                    height="24"
+                    fill="white"
+                    transform="translate(23.5 24) rotate(180)"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 <link
@@ -69,8 +121,8 @@ const posty =[1, 2, 3]
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 
-<link rel="stylesheet" href="/assets/css/slider.css" /> 
-<link rel="stylesheet" href="/assets/css/filters.css" /> 
+<link rel="stylesheet" href="/assets/css/slider.css" />
+<link rel="stylesheet" href="/assets/css/filters.css" />
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"

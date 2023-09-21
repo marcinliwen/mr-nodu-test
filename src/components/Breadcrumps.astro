@@ -4,45 +4,73 @@ const { breadcrumps } = Astro.props;
 
 <section class="pt-10 pb-20 bg-second-400">
   <div class="wrapper container max-w-[1274px]">
- 
-      <ul
-        class="list-none p-0 flex flex-wrap gap-2 md:gap-6 items-center text-sm text-main-200 font-normal"
-      >
-        <li>
-          <a href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                <g clip-path="url(#clip0_84_5902)">
-                  <path d="M23.116 9.7L12.616 1.482C12.4401 1.34446 12.2233 1.26974 12 1.26974C11.7767 1.26974 11.5599 1.34446 11.384 1.482L0.884 9.7C0.764487 9.79346 0.667805 9.91288 0.601275 10.0492C0.534746 10.1856 0.500113 10.3353 0.5 10.487V23C0.5 23.2652 0.605357 23.5196 0.792893 23.7071C0.98043 23.8946 1.23478 24 1.5 24H8V18C8 16.9391 8.42143 15.9217 9.17157 15.1716C9.92172 14.4214 10.9391 14 12 14C13.0609 14 14.0783 14.4214 14.8284 15.1716C15.5786 15.9217 16 16.9391 16 18V24H22.5C22.7652 24 23.0196 23.8946 23.2071 23.7071C23.3946 23.5196 23.5 23.2652 23.5 23V10.487C23.4999 10.3353 23.4653 10.1856 23.3987 10.0492C23.3322 9.91288 23.2355 9.79346 23.116 9.7Z" stroke="#651B22" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_84_5902">
-                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
-                  </clipPath>
-                </defs>
-              </svg>
-          </a>
-        </li>
-        {
-          breadcrumps.map((item) => (
-            <li class="flex gap-2 md:gap-6 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 17" fill="none">
-  <g clip-path="url(#clip0_84_5904)">
-    <path d="M3.77117 16.1667L12.1545 8.74934C12.1897 8.71806 12.218 8.67967 12.2373 8.63669C12.2566 8.59371 12.2666 8.54713 12.2666 8.50001C12.2666 8.45288 12.2566 8.4063 12.2373 8.36332C12.218 8.32034 12.1897 8.28195 12.1545 8.25067L3.77117 0.83334" stroke="#750843" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <defs>
-    <clipPath id="clip0_84_5904">
-      <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-    </clipPath>
-  </defs>
-</svg>
+    <ul
+      class="list-none p-0 flex flex-wrap gap-2 md:gap-6 items-center text-sm text-main-200 font-normal"
+    >
+      <li>
+        <a href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_84_5902)">
+              <path
+                d="M23.116 9.7L12.616 1.482C12.4401 1.34446 12.2233 1.26974 12 1.26974C11.7767 1.26974 11.5599 1.34446 11.384 1.482L0.884 9.7C0.764487 9.79346 0.667805 9.91288 0.601275 10.0492C0.534746 10.1856 0.500113 10.3353 0.5 10.487V23C0.5 23.2652 0.605357 23.5196 0.792893 23.7071C0.98043 23.8946 1.23478 24 1.5 24H8V18C8 16.9391 8.42143 15.9217 9.17157 15.1716C9.92172 14.4214 10.9391 14 12 14C13.0609 14 14.0783 14.4214 14.8284 15.1716C15.5786 15.9217 16 16.9391 16 18V24H22.5C22.7652 24 23.0196 23.8946 23.2071 23.7071C23.3946 23.5196 23.5 23.2652 23.5 23V10.487C23.4999 10.3353 23.4653 10.1856 23.3987 10.0492C23.3322 9.91288 23.2355 9.79346 23.116 9.7Z"
+                stroke="#651B22"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_84_5902">
+                <rect
+                  width="24"
+                  height="24"
+                  fill="white"
+                  transform="translate(0 0.5)"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      {
+        breadcrumps.map((item) => (
+          <li class="flex gap-2 md:gap-6 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 17"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_84_5904)">
+                <path
+                  d="M3.77117 16.1667L12.1545 8.74934C12.1897 8.71806 12.218 8.67967 12.2373 8.63669C12.2566 8.59371 12.2666 8.54713 12.2666 8.50001C12.2666 8.45288 12.2566 8.4063 12.2373 8.36332C12.218 8.32034 12.1897 8.28195 12.1545 8.25067L3.77117 0.83334"
+                  stroke="#750843"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_84_5904">
+                  <rect
+                    width="16"
+                    height="16"
+                    fill="white"
+                    transform="translate(0 0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
 
-              <a href={item.link} class=" text-main-200 font-normal">
-                <p>{item.name}</p>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    
+            <a href={item.link} class=" text-main-200 font-normal">
+              <p>{item.name}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </section>

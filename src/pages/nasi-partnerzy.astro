@@ -1,76 +1,103 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
 import VideoRoll from "../components/VideoRoll.astro";
 
-const hero ={
-    title: "Mr Nodu",
-    subtitle: "co wyróżnia naszą posypkę panko?",
-    text: "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-    button_link: "/produkt",
-    image: "/assets/images/produkty-hero.png",
-    textdark: true
-}
+const hero = {
+  title: "Mr Nodu",
+  subtitle: "co wyróżnia naszą posypkę panko?",
+  text: "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+  button_link: "/produkt",
+  image: "/assets/images/produkty-hero.png",
+  textdark: true,
+};
 
 const ingrediens = [
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"},
-    {name: "Składnik", value: "1 kapsułka dziennie"}
-]
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+  { name: "Składnik", value: "1 kapsułka dziennie" },
+];
 
 const values = [
-    {name: "Partner 1", description:"Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.  Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel.", image:"/assets/images/quality-2.png"},
-    {name: "Partner 2", description:"Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.  Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel.", image:"/assets/images/quality-3.png"},
-    {name: "Partner 3", description:"Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.  Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel.", image:"/assets/images/quality-4.png"},
-  
-]
+  {
+    name: "Partner 1",
+    description:
+      "Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.  Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel.",
+    image: "/assets/images/quality-2.png",
+  },
+  {
+    name: "Partner 2",
+    description:
+      "Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.  Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel.",
+    image: "/assets/images/quality-3.png",
+  },
+  {
+    name: "Partner 3",
+    description:
+      "Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.  Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel.",
+    image: "/assets/images/quality-4.png",
+  },
+];
 ---
 
-<Layout title="Mr Nodu" isHome={false} textdark={true} >
+<Layout title="Mr Nodu" isHome={false} textdark={true}>
   <main>
     <section class="bg-second-400 pt-32 lg:pt-52 pb-28 relative">
-        <div class="container wrapper  max-w-[1274px]">
-          <div class="flex flex-wrap flex-col-reverse md:flex-row lg:flex-nowrap gap-4 md:justify-center lg:justify-normal lg:items-center">
-            <div class="max-w-[561px]  inView slideUp">
-                <img src="/assets/images/quality-1.png" class="rounded-2xl"/>
-              </div>
-            <div class="max-w-[565px] text-main-200 inView slideUp lg:ml-auto">
-              <h1 class="mb-4">Nasi partnerzy</h2>
-              <h4 class="mb-8">Kompleksowa opieka nad produktem</h4>
-              <p class="mb-8">jest bagatym źródlem składników odżywczych pomagających zachować zdrowe życie (biotyna i cynk), skórę (jod i niacyna) i paznokcie (cynk).</p>
-              <p class="mb-8">Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl.</p>
-              
-              
-             
-            </div>
-            
+      <div class="container wrapper max-w-[1274px]">
+        <div
+          class="flex flex-wrap flex-col-reverse md:flex-row lg:flex-nowrap gap-4 md:justify-center lg:justify-normal lg:items-center"
+        >
+          <div class="max-w-[561px] inView slideUp">
+            <img src="/assets/images/quality-1.png" class="rounded-2xl" />
+          </div>
+          <div class="max-w-[565px] text-main-200 inView slideUp lg:ml-auto">
+            <h1 class="mb-4">Nasi partnerzy</h1>
+            <h4 class="mb-8">Kompleksowa opieka nad produktem</h4>
+            <p class="mb-8">
+              jest bagatym źródlem składników odżywczych pomagających zachować
+              zdrowe życie (biotyna i cynk), skórę (jod i niacyna) i paznokcie
+              (cynk).
+            </p>
+            <p class="mb-8">
+              Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+              feugiat lectus. Class aptent taciti sociosqu ad litora torquent
+              per conubia nostra, per inceptos himenaeos. Praesent auctor purus
+              luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
+              rhoncus ex. Suspendisse ac rhoncus nisl.
+            </p>
           </div>
         </div>
-      </section>
-      <section class="py-20 bg-white">
-        <div class="container wrapper max-w-[1274px]">
-            {values.map(item=>{
-                return(
-                    <div class="mb-20 flex flex-wrap md:flex-nowrap md:items-start text-main-200  md:flex-row   md:even:flex-row-reverse group">
-                            <div class="max-w-[729px] md:mr-8 lg:mr-auto md:group-even:ml-8 lg:group-even:mr-0 lg:group-even:ml-auto mb-8 md:mb-0">
-                                <h2 class="mb-10">{item.name}</h2>
-                                <p>{item.description}</p>
-                            </div>
-                            <img src={item.image} class="w-full md:max-w-[318px] rounded-2xl"/>
-                        </div>
-                        
-                )
-            })}
-        </div>
-      </section>
+      </div>
+    </section>
+    <section class="py-20 bg-white">
+      <div class="container wrapper max-w-[1274px]">
+        {
+          values.map((item) => {
+            return (
+              <div class="mb-20 flex flex-wrap md:flex-nowrap md:items-start text-main-200  md:flex-row   md:even:flex-row-reverse group">
+                <div class="max-w-[729px] md:mr-8 lg:mr-auto md:group-even:ml-8 lg:group-even:mr-0 lg:group-even:ml-auto mb-8 md:mb-0">
+                  <h2 class="mb-10">{item.name}</h2>
+                  <p>{item.description}</p>
+                </div>
+                <img
+                  src={item.image}
+                  class="w-full md:max-w-[318px] rounded-2xl"
+                />
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
     <VideoRoll bg_class={"bg-white"} />
-   
   </main>
 </Layout>
 <link
@@ -78,7 +105,7 @@ const values = [
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 
-<link rel="stylesheet" href="/assets/css/slider.css" /> 
+<link rel="stylesheet" href="/assets/css/slider.css" />
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"

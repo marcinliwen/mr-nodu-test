@@ -2,34 +2,52 @@
 import Layout from "../layouts/Layout.astro";
 import Newsletter from "../components/Newsletter.astro";
 import VideoRoll from "../components/VideoRoll.astro";
- import About from "../components/About.astro";
+import About from "../components/About.astro";
 import Instagram from "../components/Instagram.astro";
 import BlogRoll from "../components/BlogRoll.astro";
 import PackshotSlider from "../components/Packshot_slider.astro";
 ---
 
-<Layout title="Mr Nodu" isHome={true} textdark={true} >
+<Layout title="Mr Nodu" isHome={true} textdark={true}>
   <main>
-    <section class="pt-32 lg:pt-52 pb-20 bg-second-200/10 ">
-        <div class="container wrapper ">
-            <div class="flex lg:gap-[100px] flex-wrap">
-                <div class="max-w-[400px] lg:max-w-[562px] mb-12 md:mb-0 md:pl-[83px]">
-                    <h1 class="mb-6 text-main-200">Marka</h1>
-                    <h3 class="text-main-200 mb-6">Posypka Panko</h3>
-                    <p class="mb-6 text-main-300">To ponadczasowa marka, która troszczy się o brzuchy Polaków. Szczyciły się długoletnią renomą ze względu na wyjątkową skuteczność i specjalistyczny charakter produktu, to marka inna niż wszystkie. </p>
-                    <p class="mb-6 text-main-300">Tam gdzie pozostali producenci podążają za konwencjami, oferując standardowe rozwiązania, my staramy się je przełamywać. Wierzymy, że to najlepsza droga do tworzenia skutecznych i ukierunkowanych produktów. Tajemnica marki tkwi w odpowiednio dobranej kompozycji składników produktu.</p>
-                    <p class="mb-6 text-main-300">Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                    <div class="grid grid-cols-3 gap-6">
-                        <img src="/assets/images/medal.png" class="rounded-2xl"/>
-                        <img src="/assets/images/medal.png" class="rounded-2xl"/>
-                        <img src="/assets/images/medal.png" class="rounded-2xl"/>
-                    </div>
-                </div>
-                <div class="max-w-[565px] ml-auto">
-                    <img src="/assets/images/marka-nodu.png"/>
-                </div>
-              </div>
+    <section class="pt-32 lg:pt-52 pb-20 bg-second-200/10">
+      <div class="container wrapper">
+        <div class="flex lg:gap-[100px] flex-wrap">
+          <div
+            class="max-w-[400px] lg:max-w-[562px] mb-12 md:mb-0 md:pl-[83px]"
+          >
+            <h1 class="mb-6 text-main-200">Marka</h1>
+            <h3 class="text-main-200 mb-6">Posypka Panko</h3>
+            <p class="mb-6 text-main-300">
+              To ponadczasowa marka, która troszczy się o brzuchy Polaków.
+              Szczyciły się długoletnią renomą ze względu na wyjątkową
+              skuteczność i specjalistyczny charakter produktu, to marka inna
+              niż wszystkie.
+            </p>
+            <p class="mb-6 text-main-300">
+              Tam gdzie pozostali producenci podążają za konwencjami, oferując
+              standardowe rozwiązania, my staramy się je przełamywać. Wierzymy,
+              że to najlepsza droga do tworzenia skutecznych i ukierunkowanych
+              produktów. Tajemnica marki tkwi w odpowiednio dobranej kompozycji
+              składników produktu.
+            </p>
+            <p class="mb-6 text-main-300">
+              Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+            </p>
+            <div class="grid grid-cols-3 gap-6">
+              <img src="/assets/images/medal.png" class="rounded-2xl" />
+              <img src="/assets/images/medal.png" class="rounded-2xl" />
+              <img src="/assets/images/medal.png" class="rounded-2xl" />
+            </div>
+          </div>
+          <div class="max-w-[565px] ml-auto">
+            <img src="/assets/images/marka-nodu.png" />
+          </div>
         </div>
+      </div>
     </section>
     <PackshotSlider />
     <About />
@@ -44,7 +62,7 @@ import PackshotSlider from "../components/Packshot_slider.astro";
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 
-<link rel="stylesheet" href="/assets/css/slider.css" /> 
+<link rel="stylesheet" href="/assets/css/slider.css" />
 <script
   is:inline
   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
