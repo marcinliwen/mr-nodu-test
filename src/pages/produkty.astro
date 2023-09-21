@@ -17,17 +17,18 @@ const hero = {
 
 <Layout title="Mr Nodu" isHome={false} textdark={true}>
   <main>
-    <section class="bg-white relative products-hero">
+    <section class="produkts-gradient relative products-hero">
       <div class="swiper products-swiper h-full">
         <div class="swiper-wrapper">
           {
             [1, 2, 3, 4].map((item) => {
               return (
-                <div class="swiper-slide pt-[100px] md:pt-52 pb-[100px] md:pb-28 relative">
+                <div class="swiper-slide pt-[100px] md:pt-32 pb-[100px] md:pb-28 relative">
                   <div class="container wrapper max-w-[1274px] text-main-200 relative z-20 h-full">
-                    <div class="max-w-[565px] flex-1 mb-8 lg:mb-0 h-full pt-16 md:pt-0">
+                    <div class="grid md:grid-cols-2 items-center pb-20 md:pb-0">
+                    <div class="max-w-[565px] flex-1 md:mb-8 lg:mb-0 h-full  md:pt-0 flex flex-col justify-center">
                       <h1 class="mb-4">Mr Nodu</h1>
-                      <h3 class="mb-8">co wyróżnia naszą posypkę panko?</h3>
+                      <h3 class="md:mb-8">co wyróżnia naszą posypkę panko?</h3>
                       <p class="mb-8 hidden md:block">
                         Korem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nunc vulputate libero et velit interdum, ac aliquet odio
@@ -46,31 +47,25 @@ const hero = {
                         Poznaj produkt
                       </a>
                     </div>
-                  </div>
-
-                  <picture>
-                    <source
-                      srcset="/assets/images/produkty-hero.png"
-                      media="(min-width: 1024px)"
-                    />
-                    <source
-                      srcset="/assets/images/produkty-hero-tab.png"
-                      media="(min-width: 764px)"
-                    />
 
                     <img
-                      class="absolute left-0 top-0 w-full h-full object-cover object-right"
-                      src="/assets/images/produkty-hero-mobile.png"
+                    class="w-full md:max-w-[500px] mx-auto"
+                      src="/assets/images/produkts-hero.png"
                       alt="Produkty"
                     />
-                  </picture>
+                    </div>
+                  </div>
+
+                  
+                   
+                 
                 </div>
               );
             })
           }
         </div>
         <div
-          class="container wrapper absolute bottom-0 w-full left-0 lg:left-[50%] lg:-translate-x-2/4 z-20"
+          class="container wrapper max-w-[1274px] absolute bottom-0 w-full left-0 lg:left-[50%] lg:-translate-x-2/4 z-20"
         >
           <div class="slider-navigation mb-8">
             <button class="swiper-button-prev nav-prev"

@@ -40,18 +40,19 @@ window.onload = () => {
   const clearFilters = document.getElementById("clear-filters");
 
   if (filtersOpenBtn) {
+
     const filterBoxHeight = filterBox.offsetHeight;
-    filterBox.style.height = filterBoxHeight + "px";
+    //filterBox.style.height = filterBoxHeight + "px";
     filtersOpenBtn.addEventListener("click", () => {
       if (filterBox.classList.contains("open")) {
-        filterBox.style.height = "0px";
+       // filterBox.style.height = "0px";
         filterBox.classList.remove("open");
         filtersAction.classList.remove("active");
       } else {
         filterBox.classList.add("open");
         filtersAction.classList.add("active");
 
-        filterBox.style.height = filterBoxHeight +10 + "px";
+        //filterBox.style.height = filterBoxHeight +10 + "px";
       }
     });
   }

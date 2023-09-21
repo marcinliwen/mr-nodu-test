@@ -3,27 +3,28 @@
     transition-duration: 0.3s;
     padding: 0;
     transition-timing-function: cubic-bezier(0.53, 0.00, 0.43, 1.00);
-    transition-property: height; 
+    transition-property: max-height, opacity; 
+    max-height: 0px;
+    opacity:0;
   }
   .filter-box.open {
-    /* height: 395px; */
     padding: 16px 0;
+    max-height: 1000px;
+    opacity:1;
   }
-  @media (min-width: 629px) {
+  @media(min-width: 1024px){
     .filter-box.open {
-      /* height: 399px; */
-    }
-  }
-  @media (min-width: 868px) {
-    .filter-box.open {
-      /* height: 148px; */
+      max-height: 500px;
     }
   }
   #filters-action #filters-open svg {
+    transform: rotate(-90deg);
+
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.53, 0, 0.43, 1);
   }
   #filters-action.active #filters-open svg {
+    transform: rotate(0deg);
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.53, 0, 0.43, 1);
   }

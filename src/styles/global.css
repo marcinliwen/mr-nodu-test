@@ -181,6 +181,9 @@
   .packshot-gradient{
     background: linear-gradient(180deg, #4B1701 0%, #753C11 100%);
   }
+  .produkts-gradient{
+    background: linear-gradient(165deg, #D1C1AA 8.77%, #D1C1AA 50.58%, #FCF0D6 93.94%);
+  }
   .post-text p{
     margin-bottom: 16px;
   }
