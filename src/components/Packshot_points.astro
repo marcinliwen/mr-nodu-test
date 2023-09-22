@@ -1,16 +1,9 @@
 ---
 ---
 
-<section class="relative py-16 bg-second-300">
-    <picture>
-        <source 
-        srcset="/assets/images/packshot-points.png"
-        media="(min-width: 1024px)"
-      />
-        <img src="/assets/images/packshot-points-mobile.png" class="inView slideUp md:absolute top-0 left-0 w-full h-full object-cover"/>
-    </picture>
-    
+<section class="relative pt-8 pb-10 md:py-16 bg-second-300">
     <div class="container wrapper">
+        <div class="grid md:grid-cols-2">
         <div class="max-w-[482px] text-white relative lg:ml-20 inView slideUp">
             <h2 class="mb-8">Dlaczego nasze panko jest najlepsze?</h2>
             <ul class="mb-8">
@@ -26,8 +19,9 @@
             </ul>
             <a href="/" class="link font-semibold">Poznaj produkty</a>
             <p class="mb-8 mt-9">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
-            <a class="btn secondary ">Dowiedz się więcej o jakości</a>
+            <a class="btn secondary mx-auto md:ml-0">Dowiedz się więcej o jakości</a>
         </div>
-            
+        <img src="/assets/images/packshot-points-mobile.png" loading="lazy" class="inView slideUp  w-full order-[-1] md:order-1"/>
+    </div> 
     </div>
 </section>
