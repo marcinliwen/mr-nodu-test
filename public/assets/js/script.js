@@ -254,6 +254,11 @@ window.onload = () => {
             );
           }
         },
+        slideChangeTransitionEnd: function(swiper){
+          console.log(swiper.el.querySelectorAll("div.swiper-slide:not(.swiper-slide-active)"))
+          let videos = swiper.el.querySelectorAll("div.swiper-slide:not(.swiper-slide-active)");
+          videos.forEach(video => video.querySelector('#video').pause())
+        }
       },
     });
     const productsSwiper = new Swiper(".products-swiper", {
@@ -544,19 +549,24 @@ window.onload = () => {
     });
   }
 
+ 
   /**
-   * video playeer
+   * video player in slider
    */
-  var playButton = document.getElementById("play_button");
+  const videoSlides = document.querySelectorAll('.video-slide');
   // Event listener for the play/pause button
-  var video = document.getElementById("video");
-
-  playButton &&
-    playButton.addEventListener("click", function () {
+ 
+  videoSlides &&
+  videoSlides.forEach(slide =>{
+    var playButton =slide.querySelector('#play_button');
+    playButton.addEventListener('click', function(){
+      let video = slide.querySelector('#video');
       video.play();
       video.setAttribute("controls", "");
-      playButton.style.display = "none";
-    });
+      this.style.display = "none";
+    })
+  })
+
 };
 
 /** add 0 befor digit */
